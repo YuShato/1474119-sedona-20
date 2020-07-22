@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -50,7 +50,7 @@
       <!-- форма отзыва -->
       <form class="review__form" method="post" action="https://echo.htmlacademy.ru">
         <!-- фио -->
-        <fieldset class="review__fieldset name">
+        <fieldset class="review__fieldset">
           <legend class="review__legend site-title site-title--dark">представьтесь:</legend>
           <!-- первая строка формы -->
           <p class="review__question">
@@ -71,7 +71,7 @@
           </p>
         </fieldset>
         <!-- телефон - эл.почта -->
-        <fieldset class="review__fieldset contacts">
+        <fieldset class="review__fieldset">
           <legend class="review__legend site-title site-title--dark">контактная информация:</legend>
           <!-- телефон -->
           <p class="review__question">
@@ -85,7 +85,7 @@
             <input class="review__input" type="email" name="email" id="email" placeholder="введите e-mail" required>
           </p>
         </fieldset>
-        <fieldset class="review__fieldset feeling">
+        <fieldset class="review__fieldset">
           <legend class="review__legend site-title site-title--dark">ваше общее впечатление:</legend>
           <ul class="review__radio-list">
             <!-- первое свойство -->
@@ -105,7 +105,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="review__fieldset places">
+        <fieldset class="review__fieldset">
           <legend class="review__legend site-title site-title--dark">посещенные достопримечательности:</legend>
           <ul class="review__checkbox-list">
             <!-- первая строка -->
@@ -130,14 +130,12 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="review__fieldset opinion">
-          <legend class="review__legend site-title site-title--dark">опишите свои эмоции:</legend>
-          <p class="review__question">
-            <label for="review-text" class="visually-hidden">расскажите о ваших впечатлениях о городе седона</label>
+        <!-- АНДРЕЙ, посмотри плиз, НУЖЕН ЛИ ЗДЕСЬ ФИЕЛДСЕТ? И ПРАВИЛЬНО ЛИ Я УБРАЛА <Р> И ПОСТАВИЛА ДИВ? -->
+          <div class="review__question">
+            <label for="review-text" class="review__legend site-title site-title--dark">опишите свои эмоции:</label>
             <textarea name="review-text" id="review-text" cols="30" rows="10"
               placeholder="опишите подробно все свои восторги" required></textarea>
-          </p>
-        </fieldset>
+          </div>
         <button class="review__button  site-title site-title--light" type="submit">отправить отзыв</button>
       </form>
     </section>
