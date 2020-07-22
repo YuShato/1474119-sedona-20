@@ -1,37 +1,38 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Седона отзывы</title>
+  <title>html academy: седона отзывы</title>
 </head>
 
-<body class="page__body">
+<body class="page">
   <header class="page-header">
     <a class="page-header__logo">
-      <img src="https://via.placeholder.com/150x150" alt="Логотип города Седона">
+      <img src="https://via.placeholder.com/150x150" alt="логотип города седона">
     </a>
+    <!-- всплывающее меню -->
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">открыть меню</span></button>
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
           <a class="site-list__link" href="index.html">
-            Главная
+            главная
           </a>
         </li>
         <li class="site-list__item">
           <a class="site-list__link" href="photo.html">
-            Фото и видео
+            фото и видео
           </a>
         </li>
         <li class="site-list__item">
           <a class="site-list__link">
-            Форма отзыва
+            форма отзыва
           </a>
         </li>
         <li class="site-list__item">
           <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">
-            HTML Academy
+            html academy
           </a>
         </li>
       </ul>
@@ -39,27 +40,124 @@
   </header>
   <main class="page-main">
     <div class="banner">
-      <img src="https://via.placeholder.com/150x150" alt="Главная фотография города Седона">
+      <img src="https://via.placeholder.com/150x150" alt="главная фотография города седона">
     </div>
-    <!-- Здесь будут форма отзыва -->
+    <!-- блок отзывов -->
+    <section class="review">
+      <h2 class="review__title site-title site-title--dark">оставьте свой отзыв</h2>
+      <p class="review__description photo-description site-description site-description--dark">помогите нашим отелям
+        стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      <!-- форма отзыва -->
+      <form class="review__form" method="post" action="https://echo.htmlacademy.ru">
+        <!-- фио -->
+        <fieldset class="review__fieldset">
+          <legend class="review__legend site-title site-title--dark">представьтесь:</legend>
+          <!-- первая строка формы -->
+          <p class="review__question">
+            <label for="review-name" class="review__label">имя*:</label>
+            <input class="review__input" type="text" name="review-name" id="review-name" placeholder="петр" required>
+          </p>
+          <!-- вторая строка формы -->
+          <p class="review__question">
+            <label for="review-surname" class="review__label">фамилия*:</label>
+            <input class="review__input" type="text" name="review-surname" id="review-surname" placeholder="иванов"
+              required>
+          </p>
+          <!-- третья строка формы -->
+          <p class="review__question">
+            <label for="review-patronymic" class="review__label">отчество:</label>
+            <input class="review__input" type="text" name="review-patronymic" id="review-patronymic"
+              placeholder="александрович">
+          </p>
+        </fieldset>
+        <!-- телефон - эл.почта -->
+        <fieldset class="review__fieldset">
+          <legend class="review__legend site-title site-title--dark">контактная информация:</legend>
+          <!-- телефон -->
+          <p class="review__question">
+            <label for="tel-number" class="review__label">контактный телефон*:</label>
+            <input class="review__input" type="tel" name="tel-number" id="tel-number" placeholder="введите телефон"
+              required>
+          </p>
+          <!-- почта -->
+          <p class="review__question">
+            <label for="email" class="review__label">электронная почта*:</label>
+            <input class="review__input" type="email" name="email" id="email" placeholder="введите e-mail" required>
+          </p>
+        </fieldset>
+        <fieldset class="review__fieldset">
+          <legend class="review__legend site-title site-title--dark">ваше общее впечатление:</legend>
+          <ul class="review__radio-list">
+            <!-- первое свойство -->
+            <li class="review__item review__item--radio">
+              <input class="review__radio-input" type="radio" name="feeling" id="positive-feeling" checked>
+              <label class="review__radio-label" for="positive-feeling">скорее положительное</label>
+            </li>
+            <!-- второе свойство -->
+            <li class="review__item review__item--radio">
+              <input class="review__radio-input" type="radio" name="feeling" id="negative-feeling">
+              <label class="review__radio-label" for="negative-feeling">скорее отрицательное</label>
+            </li>
+            <!-- третье свойство -->
+            <li class="review__item review__item--radio">
+              <input class="review__radio-input" type="radio" name="feeling" id="neutral-feeling">
+              <label class="review__radio-label" for="neutral-feeling">затрудняюсь ответить</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="review__fieldset">
+          <legend class="review__legend site-title site-title--dark">посещенные достопримечательности:</legend>
+          <ul class="review__checkbox-list">
+            <!-- первая строка -->
+            <li class="review__item review__item--checkbox">
+              <input class="review__checkbox-input" type="checkbox" name="bridge" id="bridge" checked>
+              <label class="review__checkbox-label" for="bridge">мост дьявола</label>
+            </li>
+            <!-- вторая строка -->
+            <li class="review__item review__item--checkbox">
+              <input class="review__checkbox-input" type="checkbox" name="bell" id="bell" checked>
+              <label class="review__checkbox-label" for="bell">гора-колокол</label>
+            </li>
+            <!-- третья строка -->
+            <li class="review__item review__item--checkbox">
+              <input class="review__checkbox-input" type="checkbox" name="park" id="park" checked>
+              <label class="review__checkbox-label" for="park">слайд-парк</label>
+            </li>
+            <!-- четвертая строка -->
+            <li class="review__item review__item--checkbox">
+              <input class="review__checkbox-input" type="checkbox" name="rocks" id="rocks">
+              <label class="review__checkbox-label" for="rocks">красные скалы</label>
+            </li>
+          </ul>
+        </fieldset>
+        <!-- АНДРЕЙ, посмотри плиз, НУЖЕН ЛИ ЗДЕСЬ ФИЕЛДСЕТ? И ПРАВИЛЬНО ЛИ Я УБРАЛА <Р> И ПОСТАВИЛА ДИВ? -->
+          <div class="review__question">
+            <label for="review-text" class="review__legend site-title site-title--dark">опишите свои эмоции:</label>
+            <textarea name="review-text" id="review-text" cols="30" rows="10"
+              placeholder="опишите подробно все свои восторги" required></textarea>
+          </div>
+        <button class="review__button  site-title site-title--light" type="submit">отправить отзыв</button>
+      </form>
+    </section>
   </main>
   <footer class="page-footer">
     <div class="page-footer__wrapper">
-      <a class="page-footer__hashtag">#visitsedona</a>
-      <ul class="social__list">
+      <a class="page-footer__hashtag site-accent site-title site-title--dark">#visitsedona</a>
+      <ul class="social">
         <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">мы в вконтакте</a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">мы в фейсбуке</a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">мы в
+            инстаграме</a>
         </li>
       </ul>
       <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <b class="copyright__text">разработано</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">html academy</a>
       </div>
     </div>
   </footer>
