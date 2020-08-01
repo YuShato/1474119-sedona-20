@@ -65,20 +65,15 @@
   &--gray {
     position: relative;
     min-height: 166px;
-    padding-left: 20px;
-    padding-right: 20px;
     padding-top: 2px;
   }
-    &--gray::before {
-      content: "";
-      position: absolute;
-      width: inherit;
-      min-width: 280px;
-      height: 1px;
-      background-color: $input-keydown;
-      background-position: center;
-      left: 20px;
-      top: 0;
+    &--line::before {
+      @include line;
+    }
+
+    &--line::after{
+      @include line;
+      bottom: 0;
     }
   }
 
