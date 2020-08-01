@@ -1,0 +1,96 @@
+.advantages__list {
+  @include list-reset;
+  @include text-reset;
+}
+
+.advantages__characteristics {
+  @include list-reset;
+  @include text-reset;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 26px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.advantages__characteristic {
+  position: relative;
+  padding-left: 49px;
+  margin-top: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 39px;
+    height: 38px;
+    top: 12px;
+    left: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: $accent-color;
+  }
+
+  &--accommodation::before {
+    background-image: url(../../img/icon-house.svg);
+  }
+
+  &--souvenir::before {
+    background-image: url(../../img/icon-gift.svg);
+  }
+
+  &--food::before {
+    background-image: url(../../img/icon-burger.svg);
+  }
+}
+
+.advantages__property {
+  margin-bottom: 17px;
+}
+
+.advantages__title {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 11px;
+
+  // при мобильной верстке, прописать условие (я пока не знаю как это делать)
+  &--invisible {
+    display: none;
+  }
+}
+
+.advantages__item {
+  margin-bottom: 0;
+
+  &--gray {
+    position: relative;
+    min-height: 166px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2px;
+  }
+    &--gray::before {
+      content: "";
+      position: absolute;
+      width: inherit;
+      min-width: 280px;
+      height: 1px;
+      background-color: $input-keydown;
+      background-position: center;
+      left: 20px;
+      top: 0;
+    }
+  }
+
+.advantages__description {
+  @include text-reset;
+  margin-bottom: 4px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.advantages__image {
+  min-height: 260px;
+  min-width: 320px;
+  width: 100%;
+}

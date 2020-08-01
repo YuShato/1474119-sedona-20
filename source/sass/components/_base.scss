@@ -1,0 +1,81 @@
+.site-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  min-width: 280px;
+  min-height: 55px;
+
+  &:hover {
+    background-color: hsla(203, 42%, 58%, 1);
+  }
+
+  &:focus,
+  &:active {
+    background-color: $accent-color-dark;
+    color: hsla(0, 100%, 100%, 0.3);
+  }
+
+  &:disabled {
+    background-color: $dark-gray;
+  }
+}
+
+.site-title {
+  font-weight: 700;
+  font-size: $title-size;
+  line-height: $title-line-height;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &--light {
+    color: $light-text;
+    background-color: $accent-color; //временное свойство
+  }
+
+  &--dark {
+    color: $dark-title;
+  }
+}
+
+.site-list {
+  @include list-reset;
+  @include uppercase;
+  color: $light-text;
+  font-weight: 700;
+  background-color: $accent-color; //временное свойство
+}
+
+.site-list__link {
+  font-weight: inherit;
+  color: inherit;
+  text-decoration: none;
+  font-size: $title-size;
+  line-height: 40px;
+}
+
+.site-text {
+  @include uppercase;
+  color: $dark-text;
+  font-size: inherit;
+  line-height: $title-line-height;
+  font-weight: normal;
+}
+
+.site-img {
+  @include width-limit;
+}
+
+.site-description {
+  @include uppercase;
+  line-height: $description-line-height;
+
+  &--dark {
+    color: $dark-text;
+  }
+
+  &--light {
+    color: $light-text;
+    background-color: $accent-color; //временное свойство
+  }
+}

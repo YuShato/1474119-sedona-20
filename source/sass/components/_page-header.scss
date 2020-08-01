@@ -1,0 +1,19 @@
+.page-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 56px;
+}
+
+.page-header__logo {
+  position: absolute;
+  bottom: -102px;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+  z-index: 1;
+}
+
+.page-header__logo path:first-child {
+  fill: none;
+}

@@ -1,0 +1,68 @@
+.photos {
+  @include photo-video-wrap;
+}
+
+.photos__item {
+  position: relative;
+  padding-top: 23px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &::after {
+    @include line;
+    bottom: 0;
+  }
+}
+.photos__description {
+  @include uppercase;
+  font-weight: 700;
+  line-height: $text-line-height;
+  margin-bottom: 20px;
+}
+
+.photo__info {
+  text-align: center;
+}
+
+.photos__title {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.photos__legend {
+  line-height: $text-line-height;
+  text-transform: none;
+  margin-top: 0;
+}
+.capture {
+  margin-bottom: 10px;
+}
+
+.capture-like {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.photos__pic {
+  min-width: 280px;
+  min-height: 280px;
+  width: 100%;
+}
+
+.photos__like {
+  width: 23px;
+  height: 21px;
+  border: none;
+  background-color: inherit;
+  outline: none;
+  margin-right: 14px;
+
+  &:hover path,
+  &:focus path {
+    opacity: 0.7;
+  }
+
+  &:active path {
+    opacity: 0.9;
+  }
+}

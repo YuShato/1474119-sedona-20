@@ -1,1 +1,21 @@
-// Начните писать стили здесь
+@charset 'utf-8';
+// служебные файлы
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
+@import 'abstracts/reset.scss';
+// шрифт
+@import 'fonts/fonts.scss';
+// компоненты
+@import 'components/page';
+@import 'components/base';
+@import 'components/photo';
+@import 'components/main-nav';
+@import 'components/page-header';
+@import 'components/advantages';
+@import 'components/footer';
+@import 'components/form';
+@import 'components/review';
+@import 'components/lead-form';
+@import 'components/map';
+@import 'components/video';
+
