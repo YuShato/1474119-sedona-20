@@ -1,5 +1,8 @@
 .video {
-  @include photo-video-wrap;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  min-width: 280px;
   padding-top: 0;
   padding-bottom: 0;
 }

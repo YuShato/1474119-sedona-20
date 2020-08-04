@@ -2,20 +2,31 @@
 // служебные файлы
 @import 'abstracts/variables.scss';
 @import 'abstracts/mixins.scss';
-@import 'abstracts/reset.scss';
 // шрифт
 @import 'fonts/fonts.scss';
 // компоненты
-@import 'components/page';
-@import 'components/base';
-@import 'components/photo';
-@import 'components/main-nav';
-@import 'components/page-header';
 @import 'components/advantages';
+@import 'components/banner';
+@import 'components/container';
+@import 'components/copyright';
 @import 'components/footer';
-@import 'components/form';
-@import 'components/review';
+@import 'components/global';
 @import 'components/lead-form';
+@import 'components/main-nav';
 @import 'components/map';
+@import 'components/page';
+@import 'components/page-container';
+@import 'components/page-header';
+@import 'components/page-main';
+@import 'components/photo';
+@import 'components/review';
+@import 'components/site-button';
+@import 'components/site-description';
+@import 'components/site-list';
+@import 'components/site-text';
+@import 'components/site-title';
+@import 'components/social';
 @import 'components/video';
+
+
 

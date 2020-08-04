@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+.review-text {
+  font-weight: 700;
+  font-size: $title-size;
+  line-height: $title-line-height;
+  color: $dark-title;
+}
+
 .review__title {
   margin-top: 36px;
   margin-bottom: 25px;
@@ -18,11 +25,7 @@
   padding-right: 20px;
   padding-bottom: 5px;
   border: none;
-
-  &::before {
-    @include line;
-    top: 0px;
-  }
+  border-bottom: 1px solid $dark-gray;
 }
 
 .review__legend {
@@ -43,6 +46,7 @@
   align-items: center;
   margin-bottom: 40px;
   margin-top: 15px;
+  border: none;
 
   &--wrap {
     flex-wrap: wrap;
@@ -52,7 +56,6 @@
 .review__item {
   display: flex;
   justify-content: start;
-  margin-left: 24px;
 }
 
 .review__question-icon {
@@ -71,11 +74,11 @@
   }
 
   &--tel::after {
-    background-image: url(../../img/icon-phone.svg);
+    background-image: url(../img/icon-phone.svg);
   }
 
   &--email::after {
-    background-image: url(../../img/icon-mail.svg);
+    background-image: url(../img/icon-mail.svg);
   }
 }
 
@@ -88,7 +91,7 @@
 }
 
 .review__checkbox-list {
-  @include list-reset;
+  list-style: none;
 }
 
 .review__input {
@@ -115,7 +118,10 @@
   }
 
   &::placeholder {
-    @include review-text;
+    font-weight: 700;
+    font-size: $title-size;
+    line-height: $title-line-height;
+    color: $dark-title;
   }
 }
 
@@ -130,13 +136,14 @@
   height: 21px;
   border-radius: 50%;
   background-color: $dark-text;
-  left: -44px;
-  top: 3px;
+  left: 16px;
+  top: 16px;
 }
 
 .review__radio-label {
-  @include review-text;
   position: relative;
+  padding-left: 75px;
+  padding-top: 13px;
 
   &::before {
     content: "";
@@ -146,13 +153,14 @@
     border-radius: 50%;
     background-color: $input-color;
     border: 3px solid $input-color;
-    left: -60px;
-    top: -13px;
+    left: 0;
+    top: 0;
   }
 }
 
 .review__checkbox-list {
   display: grid;
+  @include list-reset;
   grid-row-gap: 54px;
   margin-left: 10px;
   padding-top: 25px;
@@ -160,8 +168,9 @@
 }
 
 .review__checkbox-label {
-  @include review-text;
   position: relative;
+  padding-left: 85px;
+  padding-top: 17px;
 
   &::before {
     content: "";
@@ -171,18 +180,18 @@
     background-color: $input-color;
     border: 5px solid $input-color;
     border-radius: 3px;
-    left: -70px;
-    top: -17px;
+    left: 0;
+    top: 0;
   }
 }
 
 .review__checkbox-input:checked+.review__checkbox-label::after {
-  content: url(../../img/icon-tick.svg);
+  content: url(../img/icon-tick.svg);
   width: 23px;
   height: 16px;
   position: absolute;
-  left: -52px;
-  top: 0;
+  left: 18px;
+  top: 18px;
 }
 
 .review__choise:hover+.review__choise-label::before {
@@ -210,7 +219,10 @@
   margin-top: 10px;
 
   &::placeholder {
-    @include review-text;
+    font-weight: 700;
+    font-size: $title-size;
+    line-height: $title-line-height;
+    color: $dark-title;
     padding-top: 13px;
     padding-left: 21px;
     padding-right: 23px;

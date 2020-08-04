@@ -1,17 +1,15 @@
 .photos {
-  @include photo-video-wrap;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  min-width: 280px;
 }
 
 .photos__item {
-  position: relative;
   padding-top: 23px;
   padding-left: 20px;
   padding-right: 20px;
-
-  &::after {
-    @include line;
-    bottom: 0;
-  }
+  border-bottom: 1px solid $dark-gray;
 }
 .photos__description {
   @include uppercase;
