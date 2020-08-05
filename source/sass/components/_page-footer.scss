@@ -1,0 +1,22 @@
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: $light-text;
+  opacity: 0.9;
+  width: 100%;
+  min-height: 120px;
+  padding-top: 35px;
+  padding-bottom: 22px;
+}
+
+.page-footer__hashtag {
+  font-size: $hashtag-size;
+  padding-bottom: 19px;
+}
+
+.page-footer__copyright {
+  margin-top: 35px;
+}

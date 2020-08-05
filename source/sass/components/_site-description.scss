@@ -1,0 +1,13 @@
+.site-description {
+  @include uppercase;
+  line-height: $description-line-height;
+
+  &--dark {
+    color: $dark-text;
+  }
+
+  &--light {
+    color: $light-text;
+    background-color: $accent-color; //временное свойство
+  }
+}

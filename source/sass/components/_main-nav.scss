@@ -1,0 +1,49 @@
+.main-nav {
+  @include text-reset;
+  display: grid;
+  position: relative;
+  min-width: 320px;
+  width: 100%;
+}
+
+.main-nav__list {
+  @include list-reset;
+  color: $light-text;
+  box-shadow: inset 0 1px 0 hsla(0, 100%, 100%, 0.2);
+}
+
+.site-list__item {
+  box-shadow: 0 1px 0 hsla(0, 0%, 0%, 0.2),
+    inset 0 1px 0 hsla(0, 100%, 100%, 0.2);
+  text-align: center;
+  min-width: 320px;
+}
+
+.main-nav__toggle {
+  @include text-reset;
+  position: absolute;
+  border: none;
+  background-color: inherit;
+  right: 19px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--close {
+    width: 22px;
+    height: 22px;
+    top: 17px;
+  }
+
+  &--open {
+    width: 23px;
+    height: 22px;
+    bottom: -40px;
+  }
+}

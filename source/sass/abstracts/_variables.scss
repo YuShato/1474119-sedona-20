@@ -1,0 +1,24 @@
+// colors
+$dark-title: hsla(0, 0%, 0%, 1);
+$dark-text: hsla(0, 0%, 20%, 1);
+$light-text: hsla(0, 100%, 100%, 1);
+$accent-color: hsla(203, 47%, 66%, 1);
+$accent-color-dark: hsla(202, 44%, 54%, 1);
+$input-color: hsla(0, 0%, 95%, 1);
+$input-keydown: hsla(0, 0%, 84%, 1);
+$gray-bg: hsla(0, 0%, 93%, 1);
+$dark-gray: hsla(0, 0%, 90%, 1);
+// sizes
+$title-size: 18px;
+$title-line-height: 26px;
+$text-size: 14px;
+$text-line-height: 24px;
+$hashtag-size: 21px;
+$description-line-height: 21px;
+//breakpoints
+$breakpoints: (
+  "small": (min-width: 320px),
+  "medium": (min-width: 768px),
+  "large": (min-width: 1200px),
+  "mobile-width-only": (min-width: 767px),
+);

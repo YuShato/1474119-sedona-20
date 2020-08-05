@@ -1,0 +1,11 @@
+.page {
+  background-color: $light-text;
+  color: $dark-title;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $text-size;
+  line-height: $description-line-height;
+  margin: 0 auto;
+  outline: 5px solid red; //временное свойство
+}

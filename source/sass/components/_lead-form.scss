@@ -1,0 +1,18 @@
+.lead-form {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-height: 286px;
+}
+
+.lead-form__title {
+  font-size: $hashtag-size;
+  padding-top: 33px;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.lead-form__description {
+  line-height: $text-line-height;
+  margin-bottom: 25px;
+}

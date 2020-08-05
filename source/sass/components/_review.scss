@@ -1,0 +1,221 @@
+.review {
+  text-align: center;
+}
+
+.review__title {
+  margin-top: 36px;
+  margin-bottom: 25px;
+}
+
+.review__description {
+  margin-bottom: 16px;
+}
+
+.review__fieldset {
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  border: none;
+  border-bottom: 1px solid $dark-gray;
+}
+
+.review__legend {
+  padding-top: 20px;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.review__label {
+  display: flex;
+  margin-right: 15px;
+  margin-bottom: 7px;
+}
+
+.review__question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 15px;
+  border: none;
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
+}
+
+.review__item {
+  display: flex;
+  justify-content: start;
+}
+
+.review__question-icon {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 58px;
+    width: 58px;
+    bottom: 0;
+    right: 0;
+    background-color: $dark-gray;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--tel::after {
+    background-image: url("../img/icon-phone.svg)");
+  }
+
+  &--email::after {
+    background-image: url("../img/icon-mail.svg");
+  }
+}
+
+.review__radio-list {
+  @include list-reset;
+  display: grid;
+  grid-row-gap: 45px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.review__input {
+  padding-top: 14px;
+  padding-bottom: 10px;
+  padding-left: 18px;
+  width: 100%;
+  border: 4px solid $gray-bg;
+  background-color: $gray-bg;
+  outline: none;
+  min-height: 26px;
+
+  &:hover {
+    background-color: $dark-gray;
+    border: 4px solid $dark-gray;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $light-text;
+    border: 4px solid $dark-gray;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  &::placeholder {
+    font-weight: 700;
+    font-size: $title-size;
+    line-height: $title-line-height;
+    color: $dark-title;
+  }
+}
+
+.review__radio-label {
+  position: relative;
+  padding-left: 75px;
+  padding-top: 13px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: $input-color;
+    border: 3px solid $input-color;
+    left: 0;
+    top: 0;
+  }
+}
+
+.review__radio-input:checked + .review__radio-label::after {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: $dark-text;
+  left: 16px;
+  top: 16px;
+}
+
+.review__checkbox-list {
+  @include list-reset;
+  display: grid;
+  grid-row-gap: 54px;
+  margin-left: 10px;
+  padding-top: 25px;
+  padding-bottom: 30px;
+}
+
+.review__checkbox-label {
+  position: relative;
+  padding-left: 85px;
+  padding-top: 17px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    background-color: $input-color;
+    border: 5px solid $input-color;
+    border-radius: 3px;
+    left: 0;
+    top: 0;
+  }
+}
+
+.review__checkbox-input:checked + .review__checkbox-label::after {
+  content: url("../img/icon-tick.svg");
+  width: 23px;
+  height: 16px;
+  position: absolute;
+  left: 18px;
+  top: 18px;
+}
+
+.review__choise:hover + .review__choise-label::before {
+  background-color: $dark-gray;
+  border-color: $dark-gray;
+}
+
+.review__choise:active + .review__choise-label::before,
+.review__choise:focus + .review__choise-label::before {
+  background-color: $input-keydown;
+  border-color: $input-keydown;
+}
+
+.review__choise:active + .review__choise-label::after {
+  opacity: 0.3;
+}
+
+.review__text {
+  background-color: $input-color;
+  resize: none;
+  border: none;
+  min-width: 279px;
+  min-height: 160px;
+  padding: 0;
+  margin-top: 10px;
+
+  &::placeholder {
+    font-weight: 700;
+    font-size: $title-size;
+    line-height: $title-line-height;
+    color: $dark-title;
+    padding-top: 13px;
+    padding-left: 21px;
+    padding-right: 23px;
+    padding-bottom: 29px;
+  }
+}
+
+.review__button {
+  margin-left: auto;
+  margin-right: auto;
+}
