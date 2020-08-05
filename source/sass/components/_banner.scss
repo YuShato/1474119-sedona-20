@@ -1,0 +1,28 @@
+.banner {
+  position: relative;
+  display: flex;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  height: 167px;
+  background-position: center;
+
+  &--main {
+    height: 389px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/bg-intro-triangle-mobile.svg");
+    width: 100%;
+    min-width: 322px;
+    height: 57px;
+    bottom: -1px;
+    left: -1px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+  }
+}

@@ -11,6 +11,7 @@
   padding-right: 20px;
   border-bottom: 1px solid $dark-gray;
 }
+
 .photos__description {
   @include uppercase;
   font-weight: 700;
@@ -18,7 +19,7 @@
   margin-bottom: 20px;
 }
 
-.photo__info {
+.photos__info {
   text-align: center;
 }
 
@@ -31,14 +32,6 @@
   line-height: $text-line-height;
   text-transform: none;
   margin-top: 0;
-}
-.capture {
-  margin-bottom: 10px;
-}
-
-.capture-like {
-  margin-top: 0;
-  margin-bottom: 15px;
 }
 
 .photos__pic {

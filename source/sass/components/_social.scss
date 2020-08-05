@@ -1,0 +1,23 @@
+.social {
+  @include list-reset;
+  display: flex;
+}
+
+.social__item {
+  margin-right: 6px;
+}
+
+.social__link {
+  &:hover rect,
+  &:focus rect {
+    fill: hsla(203, 42%, 58%, 1);
+  }
+
+  &:active rect {
+    fill: hsla(202, 44%, 54%, 1);
+  }
+
+  &:active path {
+    opacity: 0.3;
+  }
+}

@@ -2,13 +2,6 @@
   text-align: center;
 }
 
-.review-text {
-  font-weight: 700;
-  font-size: $title-size;
-  line-height: $title-line-height;
-  color: $dark-title;
-}
-
 .review__title {
   margin-top: 36px;
   margin-bottom: 25px;
@@ -74,11 +67,11 @@
   }
 
   &--tel::after {
-    background-image: url(../img/icon-phone.svg);
+    background-image: url("../img/icon-phone.svg)");
   }
 
   &--email::after {
-    background-image: url(../img/icon-mail.svg);
+    background-image: url("../img/icon-mail.svg");
   }
 }
 
@@ -88,10 +81,6 @@
   grid-row-gap: 45px;
   padding-top: 20px;
   padding-bottom: 30px;
-}
-
-.review__checkbox-list {
-  list-style: none;
 }
 
 .review__input {
@@ -126,21 +115,6 @@
 }
 
 .review__radio-label {
-  padding-left: 16px;
-}
-
-.review__radio-input:checked+.review__radio-label::after {
-  content: "";
-  position: absolute;
-  width: 21px;
-  height: 21px;
-  border-radius: 50%;
-  background-color: $dark-text;
-  left: 16px;
-  top: 16px;
-}
-
-.review__radio-label {
   position: relative;
   padding-left: 75px;
   padding-top: 13px;
@@ -158,9 +132,20 @@
   }
 }
 
+.review__radio-input:checked + .review__radio-label::after {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: $dark-text;
+  left: 16px;
+  top: 16px;
+}
+
 .review__checkbox-list {
-  display: grid;
   @include list-reset;
+  display: grid;
   grid-row-gap: 54px;
   margin-left: 10px;
   padding-top: 25px;
@@ -185,8 +170,8 @@
   }
 }
 
-.review__checkbox-input:checked+.review__checkbox-label::after {
-  content: url(../img/icon-tick.svg);
+.review__checkbox-input:checked + .review__checkbox-label::after {
+  content: url("../img/icon-tick.svg");
   width: 23px;
   height: 16px;
   position: absolute;
@@ -194,18 +179,18 @@
   top: 18px;
 }
 
-.review__choise:hover+.review__choise-label::before {
+.review__choise:hover + .review__choise-label::before {
   background-color: $dark-gray;
   border-color: $dark-gray;
 }
 
-.review__choise:active+.review__choise-label::before,
-.review__choise:focus+.review__choise-label::before {
+.review__choise:active + .review__choise-label::before,
+.review__choise:focus + .review__choise-label::before {
   background-color: $input-keydown;
   border-color: $input-keydown;
 }
 
-.review__choise:active+.review__choise-label::after {
+.review__choise:active + .review__choise-label::after {
   opacity: 0.3;
 }
 

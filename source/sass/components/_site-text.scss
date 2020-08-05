@@ -1,0 +1,7 @@
+.site-text {
+  @include uppercase;
+  color: $dark-text;
+  font-size: inherit;
+  line-height: $title-line-height;
+  font-weight: normal;
+}

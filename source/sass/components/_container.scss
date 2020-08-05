@@ -1,0 +1,33 @@
+.container {
+  position: relative;
+  text-align: center;
+  background-color: $accent-color;
+  width: 100%;
+  padding-top: 28px;
+  padding-bottom: 24px;
+
+  &--gray {
+    @include text-reset;
+    background-color: $gray-bg;
+    text-align: center;
+    width: 100%;
+  }
+
+  &--triangle {
+    padding-top: 55px;
+    padding-bottom: 39px;
+  }
+
+  &--triangle::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-width: 322px;
+    height: 37px;
+    top: -1px;
+    left: -1px;
+  }
+}

@@ -1,0 +1,17 @@
+.site-list {
+  @include list-reset;
+  @include uppercase;
+  color: $light-text;
+  font-weight: 700;
+  background-color: $accent-color; //временное свойство
+}
+
+.site-list__link {
+  display: block;
+  width: 100%;
+  font-weight: inherit;
+  color: inherit;
+  text-decoration: none;
+  font-size: $title-size;
+  line-height: 40px;
+}

@@ -3,7 +3,6 @@
   margin-top: 30px;
   margin-bottom: 11px;
 
-  // при мобильной верстке, прописать условие (я пока не знаю как это делать)
   &--invisible {
     display: none;
   }
@@ -21,73 +20,72 @@
     min-height: 166px;
     padding-top: 2px;
   }
-    &--line {
-      border: none;
-      border-bottom: 1px solid $dark-gray;
-      border-top: 1px solid $dark-gray;
-    }
+
+  &--line {
+    border: none;
+    border-bottom: 1px solid $dark-gray;
+    border-top: 1px solid $dark-gray;
+  }
+}
+
+.advantages__image {
+  min-height: 260px;
+  min-width: 320px;
+  width: 100%;
+}
+
+.advantages__description {
+  @include text-reset;
+  margin-bottom: 4px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.advantages__characteristics {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 26px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.advantages__characteristic {
+  position: relative;
+  padding-left: 49px;
+  margin-top: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 39px;
+    height: 38px;
+    top: 12px;
+    left: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: $accent-color;
   }
 
-  .advantages__image {
-    min-height: 260px;
-    min-width: 320px;
-    width: 100%;
+  &--accommodation::before {
+    background-image: url("../img/icon-house.svg");
   }
 
-  .advantages__description {
-    @include text-reset;
-    margin-bottom: 4px;
-    margin-left: 15px;
-    margin-right: 15px;
+  &--souvenir::before {
+    background-image: url("../img/icon-gift.svg");
   }
 
-  .advantages__characteristics {
-    @include list-reset;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 26px;
-    margin-bottom: 20px;
-    margin-left: 20px;
+  &--food::before {
+    background-image: url("../img/icon-burger.svg");
   }
+}
 
-  .advantages__characteristic {
-    position: relative;
-    padding-left: 49px;
-    margin-top: 0;
+.advantages__subtitle {
+  margin-top: 0;
+  padding-top: 25px;
+}
 
-    &::before {
-      content: "";
-      position: absolute;
-      width: 39px;
-      height: 38px;
-      top: 12px;
-      left: 0;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      color: $accent-color;
-    }
-
-    &--accommodation::before {
-      background-image: url(../img/icon-house.svg);
-    }
-
-    &--souvenir::before {
-      background-image: url(../img/icon-gift.svg);
-    }
-
-    &--food::before {
-      background-image: url(../img/icon-burger.svg);
-    }
-  }
-
-  .advantages__subtitle {
-    margin-top: 0;
-    padding-top: 25px;
-  }
-
-  .advantages__property {
-    margin-bottom: 17px;
-  }
-
-
+.advantages__property {
+  margin-bottom: 17px;
+}

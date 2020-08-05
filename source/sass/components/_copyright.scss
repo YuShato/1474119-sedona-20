@@ -1,0 +1,22 @@
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copyright__link {
+  &:hover path,
+  &:focus path {
+    fill: hsla(203, 47%, 66%, 1);
+  }
+
+  &:active path {
+    opacity: 0.3;
+  }
+}
+
+.copyright__text {
+  line-height: $title-line-height;
+  text-transform: uppercase;
+  padding-right: 13px;
+}
