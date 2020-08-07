@@ -16,9 +16,7 @@ $text-line-height: 24px;
 $hashtag-size: 21px;
 $description-line-height: 21px;
 //breakpoints
-$breakpoints: (
-  "small": (min-width: 320px),
-  "medium": (min-width: 768px),
-  "large": (min-width: 1200px),
-  "mobile-width-only": (min-width: 767px),
-);
+$small: 320px;
+$medium: 768px;
+$large: 1200px;
+$mobile-width-only: 767px;
