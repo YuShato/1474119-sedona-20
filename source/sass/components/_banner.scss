@@ -12,6 +12,10 @@
   &--main {
     height: 389px;
     background-position: center -70px;
+
+    @media (min-width: $medium) {
+      min-height: 518px;
+    }
   }
 
   &::after {
@@ -21,11 +25,19 @@
     width: 100%;
     min-width: 322px;
     height: 57px;
-    bottom: -1px;
+    bottom: -2px;
     left: 0;
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
+
+    @media (min-width: $medium) {
+      background-image: url("../img/bg-intro-triangle-tablet.svg");
+    }
+
+    @media (min-width: $large) {
+      background-image: url("../img/bg-intro-triangle-desktop.svg");
+    }
   }
 
   @media (min-width: $medium) {
@@ -33,21 +45,6 @@
     background-size: cover;
     width: 100%;
     min-height: 303px;
-
-    &--main {
-      min-height: 518px;
-    }
-
-    &::after {
-      background-image: url("../img/bg-intro-triangle-tablet.svg");
-    }
-  }
-
-
-  @media (min-width: $medium) {
-    &::after {
-      background-image: url("../img/bg-intro-triangle-desktop.svg");
-    }
   }
 }
 

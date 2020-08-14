@@ -1,4 +1,13 @@
 .page-main__title {
   margin-top: 32px;
   text-align: center;
+
+  @media (min-width: $medium) {
+    margin-top: 43px;
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: $large) {
+    margin-top: 53px;
+  }
 }

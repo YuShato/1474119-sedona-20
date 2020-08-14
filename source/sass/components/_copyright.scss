@@ -7,7 +7,7 @@
 .copyright__link {
   &:hover path,
   &:focus path {
-    fill: hsla(203, 47%, 66%, 1);
+    fill: $accent-color;
   }
 
   &:active path {

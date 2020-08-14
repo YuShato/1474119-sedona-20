@@ -6,15 +6,40 @@
   padding-top: 28px;
   padding-bottom: 24px;
 
+  @media (min-width: $medium) {
+    @include text-reset;
+    padding-top: 43px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 1;
+    max-width: 400px;
+  }
+
   &--gray {
     @include text-reset;
     background-color: $gray-bg;
     text-align: center;
+
+    @media (min-width: $medium) {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      min-height: 256px;
+      width: auto;
+      min-width: 256px;
+      max-width: 400px;
+    }
   }
 
   &--triangle {
     padding-top: 55px;
     padding-bottom: 39px;
+
+    @media (min-width: $medium) {
+      @include text-reset;
+      padding-top: 43px;
+    }
   }
 
   &--triangle::before {
@@ -28,5 +53,9 @@
     height: 37px;
     top: -1px;
     left: -1px;
+
+    @media (min-width: $medium) {
+      display: none;
+    }
   }
 }

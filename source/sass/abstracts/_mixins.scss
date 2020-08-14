@@ -12,3 +12,26 @@
   margin: 0;
   padding: 0;
 }
+
+@mixin button-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  min-width: 280px;
+  min-height: 55px;
+
+  &:hover {
+    background-color: hsla(203, 42%, 58%, 1);
+  }
+
+  &:focus,
+  &:active {
+    background-color: $accent-color-dark;
+    color: hsla(0, 100%, 100%, 0.3);
+  }
+
+  &:disabled {
+    background-color: $dark-gray;
+  }
+}

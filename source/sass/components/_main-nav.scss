@@ -14,7 +14,7 @@
 .main-nav__list {
   @include list-reset;
   color: $light-text;
-  box-shadow: inset 0 1px 0 hsla(0, 100%, 100%, 0.2);
+  box-shadow: inset 0 1px 0 $gray-shadow;
 
   @media (min-width: $medium) {
     display: flex;

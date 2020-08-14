@@ -21,22 +21,22 @@
           </svg>
         </button>
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-button">
+          <li class="site-list__item">
             <a class="site-list__link" href="index.html">
               главная
             </a>
           </li>
-          <li class="site-list__item site-button">
+          <li class="site-list__item">
             <a class="site-list__link" href="photo.html">
               фото и видео
             </a>
           </li>
-          <li class="site-list__item site-button site-button active">
+          <li class="site-list__item site-list__item--active">
             <a class="site-list__link">
               форма отзыва
             </a>
           </li>
-          <li class="site-list__item site-button">
+          <li class="site-list__item">
             <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive" target="blank">
               html academy
             </a>
@@ -141,14 +141,14 @@
       </div>
       <!-- блок отзывов -->
       <section class="review">
-        <h2 class="review__title site-title site-title--dark">оставьте свой отзыв</h2>
+        <h2 class="review__title site-title site-title--dark site-title--big">оставьте свой отзыв</h2>
         <p class="review__description photo-description site-description site-description--dark">помогите нашим отелям
           стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         <!-- форма отзыва -->
         <form class="review__form" method="post" action="https://echo.htmlacademy.ru">
           <!-- фио -->
-          <fieldset class="review__fieldset">
-            <legend class="review__legend site-title site-title--dark">представьтесь:</legend>
+          <fieldset class="review__fieldset review__fieldset--name">
+            <legend class="review__legend review__legend--left site-title site-title--dark">представьтесь:</legend>
             <!-- первая строка формы -->
             <p class="review__question">
               <label for="review-name" class="review__label site-text">имя*:</label>
@@ -168,7 +168,7 @@
             </p>
           </fieldset>
           <!-- телефон - эл.почта -->
-          <fieldset class="review__fieldset">
+          <fieldset class="review__fieldset review__fieldset--contacts">
             <legend class="review__legend site-title site-title--dark">контактная&nbsp;информация:</legend>
             <!-- телефон -->
             <p class="review__question review__question--wrap review__question-icon review__question-icon--tel">
@@ -182,8 +182,8 @@
               <input class="review__input" type="email" name="email" id="email" placeholder="Введите e-mail" required>
             </p>
           </fieldset>
-          <fieldset class="review__fieldset">
-            <legend class="review__legend site-title site-title--dark">ваше общее впечатление:</legend>
+          <fieldset class="review__fieldset review__fieldset--feeling">
+            <legend class="review__legend review__legend--left site-title site-title--dark">ваше общее впечатление:</legend>
             <ul class="review__radio-list">
               <!-- первое свойство -->
               <li class="review__item review__item--radio">
@@ -208,7 +208,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="review__fieldset">
+          <fieldset class="review__fieldset review__fieldset--places">
             <legend class="review__legend site-title site-title--dark">посещенные достопримечательности:</legend>
             <ul class="review__checkbox-list">
               <!-- первая строка -->
@@ -237,13 +237,14 @@
               </li>
             </ul>
           </fieldset>
-          <div class="review__question review__question--wrap review__fieldset">
+          <div class="review__question review__question--wrap review__fieldset review__fieldset--emotions">
             <label for="description-text"
               class="review__legend site-title site-title--dark">опишите&nbsp;свои&nbsp;эмоции:</label>
             <textarea class="review__text" name="description-text" id="description-text" cols="30" rows="10"
               placeholder="Опишите подробно все свои восторги" required></textarea>
           </div>
           <button class="review__button site-button site-title site-title--light" type="submit">отправить отзыв</button>
+          <p class="review__required site-text">* — обязательные поля</p>
         </form>
       </section>
     </main>
