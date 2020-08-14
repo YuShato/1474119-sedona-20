@@ -48,7 +48,10 @@
   }
 }
 
-.banner__svg {
+.banner__picture {
+  width: 282px;
+  height: 214px;
+
   @media (min-width: $medium) {
     width: 460px;
     height: 350px;

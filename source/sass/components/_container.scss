@@ -16,22 +16,6 @@
     max-width: 400px;
   }
 
-  &--gray {
-    @include text-reset;
-    background-color: $gray-bg;
-    text-align: center;
-
-    @media (min-width: $medium) {
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      min-height: 256px;
-      width: auto;
-      min-width: 256px;
-      max-width: 400px;
-    }
-  }
-
   &--triangle {
     padding-top: 55px;
     padding-bottom: 39px;

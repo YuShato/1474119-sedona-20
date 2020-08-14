@@ -33,9 +33,22 @@
   margin-bottom: 0;
 
   &--gray {
+    @include text-reset;
     position: relative;
     min-height: 166px;
     padding-top: 2px;
+    background-color: $gray-bg;
+    text-align: center;
+
+    @media (min-width: $medium) {
+      align-items: center;
+      flex-direction: column;
+      flex-grow: 1;
+      min-height: 256px;
+      width: auto;
+      min-width: 256px;
+      max-width: 400px;
+    }
   }
 
   &--line {
@@ -165,7 +178,6 @@
   }
 
   @media (min-width: $large) {
-    justify-content: center;
     width: 300px;
   }
 }

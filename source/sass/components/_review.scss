@@ -96,6 +96,13 @@
       border-bottom: none;
       margin-bottom: 45px;
     }
+
+    @media (min-width: $large) {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      // Андрей, помоги плиз. Не могу понять, почему у меня не сабатывает этот кусок кода для медиа-запроса $large. Хотя в стилях он отображается корректно. Уже 100 раз пробовала и не работает:(
+    }
   }
 }
 
@@ -135,34 +142,34 @@
       margin-bottom: 0;
     }
   }
+}
 
-  &-icon {
-    position: relative;
+.review__question-icon {
+  position: relative;
 
-    &::after {
-      content: "";
-      position: absolute;
-      height: 58px;
-      width: 58px;
-      bottom: 0;
-      right: 0;
-      background-color: $dark-gray;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    height: 58px;
+    width: 58px;
+    bottom: 0;
+    right: 0;
+    background-color: $dark-gray;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
-    &--tel::after {
-      background-image: url("../img/icon-phone.svg");
-    }
+  &--tel::after {
+    background-image: url("../img/icon-phone.svg");
+  }
 
-    &--email::after {
-      background-image: url("../img/icon-mail.svg");
-    }
+  &--email::after {
+    background-image: url("../img/icon-mail.svg");
+  }
 
-    @media (min-width: $large) {
-      max-width: 45%;
-      flex-wrap: nowrap;
-    }
+  @media (min-width: $large) {
+    max-width: 45%;
+    flex-wrap: nowrap;
   }
 }
 
