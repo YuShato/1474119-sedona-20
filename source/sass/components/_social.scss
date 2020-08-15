@@ -10,11 +10,11 @@
 .social__link {
   &:hover rect,
   &:focus rect {
-    fill: hsla(203, 42%, 58%, 1);
+    fill: $accent-color-light;
   }
 
   &:active rect {
-    fill: hsla(202, 44%, 54%, 1);
+    fill: $accent-color-dark;
   }
 
   &:active path {

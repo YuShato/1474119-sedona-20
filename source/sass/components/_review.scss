@@ -1,5 +1,27 @@
 .review {
   text-align: center;
+
+  @media (min-width: $medium) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  @media (min-width: $large) {
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+}
+
+.review__form {
+  @media (min-width: $medium) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .review__title {
@@ -9,6 +31,12 @@
 
 .review__description {
   margin-bottom: 16px;
+
+  @media (min-width: $medium) {
+    max-width: 435px;
+    align-self: center;
+    margin-bottom: 66px;
+  }
 }
 
 .review__fieldset {
@@ -19,12 +47,76 @@
   padding-bottom: 5px;
   border: none;
   border-bottom: 1px solid $dark-gray;
+
+  @media (min-width: $medium) {
+    @include text-reset;
+  }
+
+  &--emotions {
+    @media (min-width: $medium) {
+      width: 100%;
+    }
+  }
+
+  &--places {
+    @media (min-width: $medium) {
+      @include text-reset;
+      border: none;
+    }
+  }
+
+  &--feeling {
+    @media (min-width: $medium) {
+      order: -1;
+      border-bottom: none;
+      margin-bottom: 76px;
+      width: 45%;
+    }
+  }
+
+  &--name {
+    @media (min-width: $medium) {
+      border-bottom: none;
+      border-left: 1px solid $gray-border;
+      padding-left: 58px;
+      margin-bottom: 76px;
+      padding-right: 0;
+      width: 45%;
+    }
+
+    @media (min-width: $large) {
+      padding-left: 79px;
+    }
+  }
+
+  &--contacts {
+    @media (min-width: $medium) {
+      padding: 0;
+      width: 100%;
+      border-bottom: none;
+      margin-bottom: 45px;
+    }
+
+    @media (min-width: $large) {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      // Андрей, помоги плиз. Не могу понять, почему у меня не сабатывает этот кусок кода для медиа-запроса $large. Хотя в стилях он отображается корректно. Уже 100 раз пробовала и не работает:(
+    }
+  }
 }
 
 .review__legend {
   padding-top: 20px;
   margin-bottom: 4px;
   text-align: center;
+
+  &--left {
+    @media (min-width: $medium) {
+      margin-left: 0;
+      text-align: left;
+    }
+  }
 }
 
 .review__label {
@@ -44,11 +136,12 @@
   &--wrap {
     flex-wrap: wrap;
   }
-}
 
-.review__item {
-  display: flex;
-  justify-content: start;
+  &:last-child {
+    @media (min-width: $medium) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .review__question-icon {
@@ -67,11 +160,27 @@
   }
 
   &--tel::after {
-    background-image: url("../img/icon-phone.svg)");
+    background-image: url("../img/icon-phone.svg");
   }
 
   &--email::after {
     background-image: url("../img/icon-mail.svg");
+  }
+
+  @media (min-width: $large) {
+    max-width: 45%;
+    flex-wrap: nowrap;
+  }
+}
+
+.review__item {
+  display: flex;
+  justify-content: start;
+
+  &--checkbox {
+    @media (min-width: $large) {
+      min-width: 250px;
+    }
   }
 }
 
@@ -150,12 +259,38 @@
   margin-left: 10px;
   padding-top: 25px;
   padding-bottom: 30px;
+
+  @media (min-width: $medium) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 100px;
+  }
+
+  @media (min-width: $large) {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0;
+    margin-left: 0;
+    justify-content: space-between;
+    margin-top: 62px;
+  }
 }
 
 .review__checkbox-label {
   position: relative;
   padding-left: 85px;
   padding-top: 17px;
+
+  @media (min-width: $medium) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $large) {
+    margin-bottom: 83px;
+  }
 
   &::before {
     content: "";
@@ -213,9 +348,36 @@
     padding-right: 23px;
     padding-bottom: 29px;
   }
+
+  @media (min-width: $medium) {
+    width: 100%;
+    margin-top: 54px;
+  }
 }
 
 .review__button {
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: $medium) {
+    min-width: 50%;
+    min-height: 58px;
+    align-self: flex-start;
+    margin-right: auto;
+    margin-left: 0;
+    margin-bottom: 61px;
+    margin-top: 18px;
+  }
+
+  @media (min-width: $large) {
+    margin-bottom: 66px;
+  }
+}
+
+.review__required {
+  display: none;
+
+  @media (min-width: $medium) {
+    display: block;
+  }
 }

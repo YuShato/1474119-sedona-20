@@ -2,18 +2,33 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-bottom: 56px;
+  padding-bottom: 97px;
+
+  @media (min-width: $medium) {
+    padding-bottom: 0;
+  }
 }
 
 .page-header__logo {
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  bottom: -102px;
+  height: 97px;
+  bottom: 0;
   margin-left: auto;
   margin-right: auto;
   align-self: center;
   z-index: 1;
+
+  @media (min-width: $medium) {
+    top: 0;
+  }
 }
 
 .page-header__logo path:first-child {
   fill: none;
+
+  @media (min-width: $large) {
+    fill: $accent-color;
+  }
 }

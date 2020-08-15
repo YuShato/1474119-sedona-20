@@ -6,10 +6,16 @@
   justify-content: center;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   height: 167px;
-  background-position: center;
+  background-position: center bottom;
+
 
   &--main {
     height: 389px;
+    background-position: center -70px;
+
+    @media (min-width: $medium) {
+      min-height: 518px;
+    }
   }
 
   &::after {
@@ -19,10 +25,35 @@
     width: 100%;
     min-width: 322px;
     height: 57px;
-    bottom: -1px;
-    left: -1px;
+    bottom: -2px;
+    left: 0;
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
+
+    @media (min-width: $medium) {
+      background-image: url("../img/bg-intro-triangle-tablet.svg");
+    }
+
+    @media (min-width: $large) {
+      background-image: url("../img/bg-intro-triangle-desktop.svg");
+    }
+  }
+
+  @media (min-width: $medium) {
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-size: cover;
+    width: 100%;
+    min-height: 303px;
+  }
+}
+
+.banner__picture {
+  width: 282px;
+  height: 214px;
+
+  @media (min-width: $medium) {
+    width: 460px;
+    height: 350px;
   }
 }

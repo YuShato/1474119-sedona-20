@@ -1,8 +1,19 @@
 .capture {
   margin-bottom: 10px;
+
+  @media (min-width: $medium) {
+    margin-left: 20px;
+  }
 }
 
-.capture-like {
+.capture__like {
   margin-top: 0;
   margin-bottom: 15px;
+
+  @media (min-width: $medium) {
+    align-self: flex-end;
+    position: absolute;
+    bottom: 6px;
+    right: 26px;
+  }
 }

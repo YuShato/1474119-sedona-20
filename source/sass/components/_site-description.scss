@@ -10,4 +10,8 @@
     color: $light-text;
     background-color: $accent-color; //временное свойство
   }
+
+  @media (min-width: $medium) {
+    line-height: $text-line-height;
+  }
 }

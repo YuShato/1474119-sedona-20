@@ -13,4 +13,14 @@
   &--dark {
     color: $dark-title;
   }
+
+  &--big {
+    @media (min-width: $medium) {
+      font-size: $title-big;
+    }
+  }
+
+  @media (min-width: $medium) {
+    font-size: $hashtag-size;
+  }
 }

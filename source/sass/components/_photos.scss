@@ -3,6 +3,22 @@
   flex-wrap: wrap;
   padding-top: 15px;
   min-width: 280px;
+  max-width: 100%;
+
+  @media (min-width: $medium) {
+    margin-left: 60px;
+    margin-right: 60px;
+    padding: 0;
+  }
+
+  @media (min-width: $large) {
+    @include text-reset;
+    width: 100%;
+  }
+}
+
+.photos__link {
+  @include text-reset;
 }
 
 .photos__item {
@@ -10,6 +26,42 @@
   padding-left: 20px;
   padding-right: 20px;
   border-bottom: 1px solid $dark-gray;
+
+  @media (min-width: $medium) {
+    @include text-reset;
+    position: relative;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: $input-color;
+  }
+
+  @media (min-width: $large) {
+    width: 33%;
+  }
+
+  &--wide {
+    width: 100%;
+  }
+
+  &:nth-of-type(2n + 3) {
+    @media (min-width: $medium) {
+      background-color: $gray-photo-info;
+    }
+  }
+}
+
+.photos__features {
+  @media (min-width: $medium) {
+    @include text-reset;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    background-color: inherit;
+  }
 }
 
 .photos__description {
@@ -21,11 +73,34 @@
 
 .photos__info {
   text-align: center;
+  display: flex;
+  max-width: 458px;
+
+  @media (min-width: $medium) {
+    margin-bottom: 65px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $large) {
+    margin-bottom: 67px;
+  }
 }
 
 .photos__title {
+  max-width: 458px;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: $medium) {
+    margin-top: 65px;
+    text-align: center;
+    font-size: $title-big;
+  }
+
+  @media (min-width: $large) {
+    margin-top: 102px;
+  }
 }
 
 .photos__legend {
@@ -38,6 +113,24 @@
   min-width: 280px;
   min-height: 280px;
   width: 100%;
+
+  @media (min-width: $medium) {
+    @include text-reset;
+    height: 267px;
+    min-width: 324px;
+    outline: 2px solid red;
+  }
+
+  @media (min-width: $large) {
+    min-width: 400px;
+    max-width: 100%;
+  }
+
+  &--wide {
+    @media (min-width: $medium) {
+      height: 400px;
+    }
+  }
 }
 
 .photos__like {

@@ -1,5 +1,11 @@
 .page-container {
   width: 320px;
   margin: 0 auto;
-  outline: 5px solid blue; //временное свойство
+  max-width: 1200px;
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+  background-color: $light-text;
+
+  @media (min-width: $medium) {
+    width: 100%;
+  }
 }
