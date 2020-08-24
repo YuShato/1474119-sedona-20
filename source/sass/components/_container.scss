@@ -3,7 +3,7 @@
   text-align: center;
   background-color: $accent-color;
   width: 100%;
-  padding-top: 28px;
+  padding-top: 18px;
   padding-bottom: 24px;
 
   @media (min-width: $medium) {
@@ -13,16 +13,28 @@
     flex-direction: column;
     align-items: center;
     flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 129px;
     max-width: 400px;
   }
 
-  &--triangle {
+  @media (min-width: $large) {
     padding-top: 55px;
-    padding-bottom: 39px;
+    flex-basis: 400px;
+  }
+
+  &--triangle {
+    padding-top: 45px;
+    padding-bottom: 29px;
 
     @media (min-width: $medium) {
       @include text-reset;
-      padding-top: 43px;
+      padding-top: 41px;
+      padding-left: 1px;
+    }
+
+    @media (min-width: $large) {
+      padding-top: 46px;
     }
   }
 

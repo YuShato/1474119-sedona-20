@@ -13,3 +13,11 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.desctop-hidden {
+  display: block;
+
+  @media (min-width: $large) {
+    display: none;
+  }
+}

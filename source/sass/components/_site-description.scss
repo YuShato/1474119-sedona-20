@@ -1,6 +1,6 @@
 .site-description {
   @include uppercase;
-  line-height: $description-line-height;
+  line-height: $hashtag-size;
 
   &--dark {
     color: $dark-text;

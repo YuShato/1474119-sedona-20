@@ -1,5 +1,11 @@
+.map {
+  @media (min-width: $large) {
+    margin-top: 14px;
+  }
+}
+
 .map__image {
-  max-height: 350px;
+  height: 350px;
   width: 100%;
   min-width: 320px;
 }

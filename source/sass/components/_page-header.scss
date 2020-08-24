@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-bottom: 97px;
+  padding-bottom: 55px;
 
   @media (min-width: $medium) {
     padding-bottom: 0;
@@ -10,11 +10,11 @@
 }
 
 .page-header__logo {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  position: absolute;
   height: 97px;
-  bottom: 0;
+  top: 220px;
   margin-left: auto;
   margin-right: auto;
   align-self: center;

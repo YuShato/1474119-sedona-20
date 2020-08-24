@@ -13,7 +13,7 @@
 
   @media (min-width: $medium) {
     @include text-reset;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
     align-items: center;
     min-height: 120px;
@@ -23,8 +23,30 @@
 .page-footer__hashtag {
   font-size: $hashtag-size;
   padding-bottom: 19px;
+
+  @media (min-width: $medium) {
+    padding-left: 57px;
+    padding-top: 14px;
+  }
+
+  @media (min-width: $large) {
+    padding-left: 0;
+    padding-top: 11px;
+    margin-left: 119px;
+  }
 }
 
 .page-footer__copyright {
   margin-top: 35px;
+
+  @media (min-width: $medium) {
+    margin-right: 60px;
+    align-self: start;
+    margin-top: 43px;
+  }
+
+  @media (min-width: $large) {
+    margin-right: 120px;
+    margin-top: 39px;
+  }
 }

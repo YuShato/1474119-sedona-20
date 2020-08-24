@@ -23,6 +23,13 @@
 
   @media (min-width: $medium) {
     @include text-reset;
+    font-size: $title-big;
+    line-height: $title-line-height;
+    padding-left: 1px;
+  }
+
+  @media (min-width: $large) {
+    padding-top: 8px;
   }
 }
 
@@ -32,9 +39,18 @@
 
   @media (min-width: $medium) {
     @include text-reset;
-    line-height: $text-line-height;
-    margin-top: 37px;
-    margin-bottom: 47px;
+    margin-top: 35px;
+    margin-bottom: 38px;
     max-width: 435px;
+    padding-left: 13px;
   }
+
+  @media (min-width: $large) {
+    margin-bottom: 41px;
+  }
+}
+
+.lead-form__button {
+  min-height: 58px;
+  font-size: $hashtag-size;
 }
