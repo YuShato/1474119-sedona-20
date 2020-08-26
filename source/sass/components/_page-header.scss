@@ -13,7 +13,8 @@
   position: absolute;
   height: 97px;
   top: 220px;
-  left: calc(50% - 187px / 2);
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
 
   @media (min-width: $medium) {
