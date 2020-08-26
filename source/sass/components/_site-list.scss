@@ -3,7 +3,7 @@
   @include uppercase;
   color: $light-text;
   font-weight: 700;
-  background-color: $accent-color; //временное свойство
+  background-color: $accent-color;
 
   @media (min-width: $medium) {
     display: flex;
@@ -17,62 +17,64 @@
 }
 
 .site-list__link {
-  display: block;
-  width: 100%;
   font-weight: inherit;
   color: inherit;
   text-decoration: none;
   font-size: $title-size;
   line-height: 40px;
 
+  &:focus,
+  &:active {
+    color: $dark-text;
+    opacity: 0.3;
+    background-color: $accent-color-dark;
+  }
+
   @media (min-width: $medium) {
     font-size: $text-size;
     line-height: $title-line-height;
-    width: auto;
+    background-color: $light-text;
+
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $accent-color;
+      background-color: inherit;
+    }
+
+    &--active {
+      color: $gray-brown;
+
+      &:hover {
+        color: $brown;
+      }
+
+      &:active,
+      &:focus {
+        color: $gray-brown;
+        opacity: 0.3;
+      }
+    }
   }
 }
 
 .site-list__item {
-  @include button-style;
   box-shadow: 0 1px 0 $black-shadow,
     inset 0 1px 0 $gray-shadow;
   text-align: center;
   min-width: 320px;
+  padding: 8px;
+  box-sizing: border-box;
 
   @media (min-width: $medium) {
     min-width: 153px;
     width: 20%;
     box-shadow: none;
-
-    &:hover {
-      background-color: $light-text;
-      color: $accent-color;
-    }
-
-    &:focus,
-    &:active {
-      color: $dark-text;
-      opacity: 0.3;
-      background-color: $light-text;
-    }
+    padding-top: 16px;
 
     &:nth-child(2) {
       margin-right: 20%;
-    }
-
-    &--active {
-      color: $gray-brown;
-    }
-
-    &--active:hover {
-      color: $brown;
-      background-color: $light-text;
-    }
-
-    &--active:active,
-    &--active:focus {
-      opacity: 0.3;
-      background-color: $light-text;
     }
   }
 }

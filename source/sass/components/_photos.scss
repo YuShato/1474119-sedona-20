@@ -19,13 +19,24 @@
 
 .photos__link {
   @include text-reset;
+
+  @media (min-width: $large) {
+    max-height: 400px;
+  }
+
+  &--small {
+    @media (min-width: $large) {
+      max-height: 267px;
+    }
+  }
 }
 
 .photos__item {
-  padding-top: 23px;
+  padding-top: 24px;
   padding-left: 20px;
   padding-right: 20px;
   border-bottom: 1px solid $dark-gray;
+  border-top: 1px solid $dark-gray;
 
   @media (min-width: $medium) {
     @include text-reset;
@@ -38,7 +49,7 @@
   }
 
   @media (min-width: $large) {
-    width: 33%;
+    width: 33.33%;
   }
 
   &--wide {
@@ -61,6 +72,16 @@
     justify-content: space-between;
     width: 100%;
     background-color: inherit;
+    padding-bottom: 17px;
+  }
+
+  @media (min-width: $large) {
+    position: absolute;
+    bottom: 0;
+    background-color: $dark-title;
+    opacity: 0.3;
+    color: $light-text;
+    padding-bottom: 20px;
   }
 }
 
@@ -69,21 +90,26 @@
   font-weight: 700;
   line-height: $text-line-height;
   margin-bottom: 20px;
+
+  &--info {
+    margin-bottom: 0;
+  }
 }
 
 .photos__info {
   text-align: center;
   display: flex;
   max-width: 458px;
+  margin-left: 20px;
+  margin-right: 20px;
+  line-height: $text-line-height;
+  margin-bottom: 15px;
 
   @media (min-width: $medium) {
-    margin-bottom: 65px;
+    margin-bottom: 79px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  @media (min-width: $large) {
-    margin-bottom: 67px;
+    padding-top: 5px;
   }
 }
 
@@ -91,10 +117,12 @@
   max-width: 458px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+  margin-top: 34px;
+  margin-bottom: 28px;
 
   @media (min-width: $medium) {
     margin-top: 65px;
-    text-align: center;
     font-size: $title-big;
   }
 
@@ -107,23 +135,28 @@
   line-height: $text-line-height;
   text-transform: none;
   margin-top: 0;
+
+  @media (min-width: $large) {
+    color: $light-text;
+  }
 }
 
 .photos__pic {
   min-width: 280px;
-  min-height: 280px;
+  height: 280px;
   width: 100%;
+  margin-bottom: 3px;
 
   @media (min-width: $medium) {
     @include text-reset;
     height: 267px;
     min-width: 324px;
-    outline: 2px solid red;
   }
 
   @media (min-width: $large) {
     min-width: 400px;
     max-width: 100%;
+    position: relative;
   }
 
   &--wide {
@@ -139,7 +172,14 @@
   border: none;
   background-color: inherit;
   outline: none;
-  margin-right: 14px;
+  margin-right: 11px;
+  padding-left: 0;
+
+  @media (min-width: $medium) {
+    padding-left: 10px;
+    padding-bottom: 2px;
+    padding-right: 17px;
+  }
 
   &:hover path,
   &:focus path {
@@ -148,5 +188,12 @@
 
   &:active path {
     opacity: 0.9;
+  }
+}
+
+.photos__like path {
+  @media (min-width: $large) {
+    fill: $light-text;
+    opacity: 1;
   }
 }

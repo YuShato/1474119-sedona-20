@@ -5,9 +5,12 @@
 // шрифт
 @import "fonts/fonts.scss";
 // компоненты
+@import "components/site-description";
+@import "components/site-button";
+@import "components/site-text";
+@import "components/site-title";
 @import "components/advantages";
 @import "components/banner";
-@import "components/capture";
 @import "components/container";
 @import "components/copyright";
 @import "components/desription-text";
@@ -21,11 +24,8 @@
 @import "components/page-header";
 @import "components/page-main";
 @import "components/photos";
-@import "components/site-button";
-@import "components/site-description";
 @import "components/site-list";
-@import "components/site-text";
-@import "components/site-title";
 @import "components/social";
 @import "components/review";
 @import "components/video";
+@import "components/capture";
