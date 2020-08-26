@@ -30,6 +30,29 @@
     line-height: $title-line-height;
     width: auto;
   }
+
+  &:focus,
+  &:active {
+    color: $dark-text;
+    opacity: 0.3;
+    background-color: $light-text;
+  }
+
+  &--active {
+    color: $gray-brown;
+    cursor: pointer;
+  }
+
+  &--active:hover {
+    color: $brown;
+    background-color: $light-text;
+  }
+
+  &--active:active,
+  &--active:focus {
+    opacity: 0.3;
+    background-color: $light-text;
+  }
 }
 
 .site-list__item {
@@ -49,30 +72,8 @@
       color: $accent-color;
     }
 
-    &:focus,
-    &:active {
-      color: $dark-text;
-      opacity: 0.3;
-      background-color: $light-text;
-    }
-
     &:nth-child(2) {
       margin-right: 20%;
-    }
-
-    &--active {
-      color: $gray-brown;
-    }
-
-    &--active:hover {
-      color: $brown;
-      background-color: $light-text;
-    }
-
-    &--active:active,
-    &--active:focus {
-      opacity: 0.3;
-      background-color: $light-text;
     }
   }
 }

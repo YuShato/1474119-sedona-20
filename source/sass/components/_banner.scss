@@ -32,21 +32,23 @@
     content: "";
     position: absolute;
     background-image: url("../img/bg-intro-triangle-mobile.svg");
-    width: 100%;
-    min-width: 322px;
-    height: 57px;
-    bottom: -2px;
-    left: 0;
+    min-width: calc(100% + 2px);
+    height: 28px;
+    bottom: -1px;
+    left: -1px;
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
 
     @media (min-width: $medium) {
       background-image: url("../img/bg-intro-triangle-tablet.svg");
+      height: 57px;
+      background-size: auto;
     }
 
     @media (min-width: $large) {
       background-image: url("../img/bg-intro-triangle-desktop.svg");
+      background-size: cover;
     }
   }
 }

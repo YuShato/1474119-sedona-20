@@ -244,6 +244,14 @@
     margin-left: 20px;
     margin-bottom: 10px;
   }
+
+  span {
+    display: block;
+
+    @media (min-width: $large) {
+      display: none;
+    }
+  }
 }
 
 .review__question {
@@ -265,7 +273,7 @@
     }
   }
 
-  &--wrap:last-of-type {
+  &--wrap:last-of-type:not(.review__question-icon) {
     margin-bottom: 47px;
     justify-content: center;
 
