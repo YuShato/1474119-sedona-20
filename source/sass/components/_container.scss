@@ -55,4 +55,10 @@
       display: none;
     }
   }
+
+  &--second {
+    @media (min-width: $medium) {
+      order: 2;
+    }
+  }
 }
