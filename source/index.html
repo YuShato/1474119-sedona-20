@@ -133,7 +133,8 @@
     </header>
     <main class="page-main">
       <div class="banner banner--main">
-        <svg class="banner__picture banner__picture--main" width="282" height="214" viewBox="0 0 282 214" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="banner__picture banner__picture--main" width="282" height="214" viewBox="0 0 282 214" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
           <path
             d="M101.385 42.8044L101.262 42.9267C100.403 43.844 99.4211 44.272 98.5006 44.272L100.219 41.2757C101.324 39.3801 100.28 37.5456 98.5619 37.5456C97.1504 37.5456 96.0457 38.096 95.0024 39.9304L94.0819 41.5203L93.3454 42.8044L93.2227 42.9267C91.8725 44.4555 90.5837 45.6785 89.7859 45.6785C89.3563 45.6785 89.1722 45.3727 89.6018 44.7001L93.5295 37.8514H95.0024L95.5548 36.9953H94.0205L95.7389 33.999H93.8977L92.1793 36.9953H90.5223L89.97 37.8514H91.627L87.9447 44.2109C87.1469 45.5562 87.6993 46.8403 89.1722 46.8403C90.2155 46.8403 91.4429 46.0454 92.5476 44.9447C92.5476 47.2683 95.8002 47.7575 97.7641 45.2504H98.1937C99.2984 45.2504 101.017 44.5778 101.937 43.4771C101.937 43.1713 101.63 42.9267 101.385 42.8044ZM97.4573 42.9267H97.3959C96.7822 42.9267 96.2912 43.4159 96.2912 44.0274C96.2912 44.272 96.3526 44.4555 96.4753 44.6389V44.7001C95.6161 46.1677 93.5295 45.9231 94.5728 43.9663L95.9844 41.5815L96.8436 40.1139C98.1323 37.9125 99.9121 38.7686 98.8074 40.6642L97.4573 42.9267Z"
             fill="#766458" />
@@ -216,18 +217,29 @@
         <br> заслуживающий&nbsp;большего!</h1>
       <!-- преимущества -->
       <section class="advantages">
-        <h2 class="advantages__title site-text">рассмотрим&nbsp;5&nbsp;причин,&nbsp;по&nbsp;которым седона&nbsp;круче, чем&nbsp;гранд&nbsp;каньон!
+        <h2 class="advantages__title site-text">рассмотрим&nbsp;5&nbsp;причин,&nbsp;по&nbsp;которым седона&nbsp;круче,
+          чем&nbsp;гранд&nbsp;каньон!
         </h2>
         <ul class="advantages__list">
           <!-- первое преимущество -->
           <li class="advantages__item">
-            <div class="container container--triangle">
-              <h3 class="advantages__subtitle advantages__subtitle--light site-title site-title--light">настоящий городок</h3>
-              <p class="advantages__count site-description site-description--light">— №1 —</p>
-              <p class="advantages__description advantages__description--triangle advantages__description--wide site-description site-description--light">седона не  аттракцион для туристов, там течет своя жизнь</p>
+            <div class="advantages__wrap">
+              <div class="container container--triangle">
+                <h3 class="advantages__subtitle advantages__subtitle--light site-title site-title--light">настоящий
+                  городок</h3>
+                <p class="advantages__count site-description site-description--light">— №1 —</p>
+                <p
+                  class="advantages__description advantages__description--triangle advantages__description--wide site-description site-description--light">
+                  седона не аттракцион для туристов, там течет своя жизнь</p>
+              </div>
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/main-city-desktop@1x.jpg, img/main-city-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg, img/main-city-tablet@2x.jpg 2x">
+                <img class="advantages__image advantages__image--right site-img" src="img/main-city-mobile@1x.jpg"
+                  srcset="img/main-city-mobile@2x.jpg 2x" alt="Седона - настоящий город, не аттракцион">
+              </picture>
             </div>
-            <img class="advantages__image site-img " src="https://via.placeholder.com/150x150"
-              alt="жилье в городе седона">
             <ul class="advantages__characteristics">
               <li class="advantages__characteristic advantages__characteristic--accommodation">
                 <h4 class="advantages__property site-title site-title--dark">жилье</h4>
@@ -236,7 +248,8 @@
               </li>
               <li class="advantages__characteristic advantages__characteristic--souvenir">
                 <h4 class="advantages__property site-title site-title--dark">сувениры</h4>
-                <p class="advantages__description site-description site-description--dark">не&nbsp;только&nbsp;китайского,<br class="advantages__break"> но
+                <p class="advantages__description site-description site-description--dark">
+                  не&nbsp;только&nbsp;китайского,<br class="advantages__break"> но
                   и&nbsp;местного&nbsp;производства!</p>
               </li>
               <li class="advantages__characteristic advantages__characteristic--food">
@@ -248,31 +261,48 @@
           </li>
           <!-- второе преимущество -->
           <li class="advantages__item advantages__item--accent">
-            <div class="container container--second">
-              <h3 class="advantages__subtitle advantages__subtitle--second site-title site-title--light">там есть мост дьявола</h3>
-              <p class="advantages__count site-description site-description--light">— №2 —</p>
-              <p class="advantages__description advantages__description--second site-description site-description--light">да, по нему можно пройти! <br class="advantages__break"> если вы осмелитесь, конечно</p>
+            <div class="advantages__wrap advantages__wrap--right">
+              <div class="container container--second">
+                <h3 class="advantages__subtitle advantages__subtitle--second site-title site-title--light">там есть мост
+                  дьявола</h3>
+                <p class="advantages__count site-description site-description--light">— №2 —</p>
+                <p
+                  class="advantages__description advantages__description--second site-description site-description--light">
+                  да, по нему можно пройти! <br class="advantages__break"> если вы осмелитесь, конечно</p>
+              </div>
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/photo-bridge-desktop@1x.jpg, img/photo-bridge-desktop@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/photo-bridge-tablet@1x.jpg, img/photo-bridge-tablet@2x.jpg 2x">
+                <img class="advantages__image site-img" src="img/photo-bridge-mobile@1x.jpg"
+                  srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="мост дьявола в городе седона">
+              </picture>
             </div>
-            <img class="advantages__image advantages__image--right site-img " src="https://via.placeholder.com/150x150"
-              alt="мост дьявола в городе седона">
           </li>
           <!-- третье преимущество -->
           <li class="advantages__item advantages__item--gray">
-            <h3 class="advantages__subtitle advantages__subtitle--light site-title site-title--dark">небольшая площадь</h3>
+            <h3 class="advantages__subtitle advantages__subtitle--light site-title site-title--dark">небольшая площадь
+            </h3>
             <p class="advantages__count site-description site-description--dark">— №3 —</p>
-            <p class="advantages__description advantages__description--square site-description site-description--dark">все&nbsp;интересные&nbsp;места находятся очень близко</p>
+            <p class="advantages__description advantages__description--square site-description site-description--dark">
+              все&nbsp;интересные&nbsp;места находятся очень близко</p>
           </li>
           <!-- четвертое преимущество -->
           <li class="advantages__item advantages__item--gray advantages__item--line">
-            <h3 class="advantages__subtitle advantages__subtitle--light site-title site-title--dark">красивая дорога</h3>
+            <h3 class="advantages__subtitle advantages__subtitle--light site-title site-title--dark">красивая дорога
+            </h3>
             <p class="advantages__count site-description site-description--dark">— №4 —</p>
-            <p class="advantages__description advantages__description--road site-description site-description--dark">ехать&nbsp;в&nbsp;седону&nbsp;из лас-вегаса совсем не&nbsp;скучно!</p>
+            <p class="advantages__description advantages__description--road site-description site-description--dark">
+              ехать&nbsp;в&nbsp;седону&nbsp;из лас-вегаса совсем не&nbsp;скучно!</p>
           </li>
           <!-- третье преимущество -->
           <li class="advantages__item advantages__item--five advantages__item--gray">
             <h3 class="advantages__subtitle advantages__subtitle--light site-title site-title--dark">мало туристов</h3>
             <p class="advantages__count site-description site-description--dark">— №5 —</p>
-            <p class="advantages__description advantages__description--majority site-description site-description--dark">большинство&nbsp;едет&nbsp;в
+            <p
+              class="advantages__description advantages__description--majority site-description site-description--dark">
+              большинство&nbsp;едет&nbsp;в
               гранд каньон и толпится&nbsp;там</p>
           </li>
         </ul>
@@ -280,15 +310,20 @@
       <!-- лид-форма-->
       <section class="lead-form">
         <h2 class="lead-form__title site-title site-title--dark site-title--big">заинтересовались?</h2>
-        <p class="lead-form__description site-description site-description--dark photo-description">укажите&nbsp;предполагаемые&nbsp;даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения гостиниц в седоне</p>
+        <p class="lead-form__description site-description site-description--dark photo-description">
+          укажите&nbsp;предполагаемые&nbsp;даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения
+          гостиниц в седоне</p>
         <a href="#" class="lead-form__button site-button site-title site-title--light">найти гостиницу</a>
       </section>
       <!-- карта -->
       <section class="map">
         <h3 class="visually-hidden">седона на карте</h3>
         <div class="map__wrapper">
-          <img class="map__image site-img" src="https://via.placeholder.com/150x150"
-            alt="Седона на карте, как добраться">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+            <img class="map__image site-img" src="img/bg-map-mobile@1x.jpg" alt="Седона на карте, как добраться">
+          </picture>
         </div>
       </section>
     </main>

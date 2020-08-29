@@ -79,6 +79,7 @@
 }
 
 .advantages__image {
+  display: block;
   width: 100%;
   object-fit: cover;
   max-height: 260px;
@@ -87,7 +88,6 @@
   @media (min-width: $medium) {
     flex-grow: 2;
     height: 256px;
-    width: auto;
     flex-shrink: 1;
     flex-basis: auto;
   }
@@ -318,5 +318,18 @@
 
   @media (min-width: $large) {
     display: block;
+  }
+}
+
+.advantages__wrap {
+  @media (min-width: $medium) {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+
+    &--right {
+      grid-template-columns: 2fr 1fr;
+    }
   }
 }
