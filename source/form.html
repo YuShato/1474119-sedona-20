@@ -44,9 +44,8 @@
         </ul>
       </nav>
       <!-- логотип -->
-      <a class="page-header__logo" href="index.html">
-        <svg width="187" height="97" viewBox="0 0 187 97" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-          aria-label="логотип города Седона">
+      <a class="page-header__logo" href="index.html" aria-label="логотип города Седона">
+        <svg width="187" height="97" viewBox="0 0 187 97" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
           <path d="M186.6 0H0L80.5 90.5C87.6 98.4 99.1 98.4 106.2 90.5L186.6 0Z" fill="#81B3D3" />
           <path d="M43.2 0.7L92.8 59.1L142.1 1.1L43.2 0.7Z" fill="#23A9E1" />
           <path d="M122 17.3C116.9 17.3 111.9 17.4 106.8 17.4C112.8 10.5 115.5 11.2 122 17.3Z" fill="white" />
@@ -149,18 +148,19 @@
             <!-- первая строка формы -->
             <p class="review__question">
               <label for="review-name" class="review__label site-text">имя*:</label>
-              <input class="review__input" type="text" name="review-name" id="review-name" placeholder="Петр" required>
+              <input class="review__input description-text" type="text" name="review-name" id="review-name"
+                placeholder="Петр" required>
             </p>
             <!-- вторая строка формы -->
             <p class="review__question">
               <label for="review-surname" class="review__label site-text">фамилия*:</label>
-              <input class="review__input" type="text" name="review-surname" id="review-surname" placeholder="Иванов"
-                required>
+              <input class="review__input description-text" type="text" name="review-surname" id="review-surname"
+                placeholder="Иванов" required>
             </p>
             <!-- третья строка формы -->
             <p class="review__question">
               <label for="review-patronymic" class="review__label site-text">отчество:</label>
-              <input class="review__input" type="text" name="review-patronymic" id="review-patronymic"
+              <input class="review__input description-text" type="text" name="review-patronymic" id="review-patronymic"
                 placeholder="Александрович">
             </p>
           </fieldset>
@@ -173,13 +173,14 @@
               <p class="review__question review__question--wrap review__question-icon review__question-icon--tel">
                 <label for="tel-number"
                   class="review__label review__label--left site-text"><span>контактный</span>&nbsp;телефон*:</label>
-                <input class="review__input" type="tel" name="tel-number" id="tel-number" placeholder="Введите телефон"
-                  required>
+                <input class="review__input description-text" type="tel" name="tel-number" id="tel-number"
+                  placeholder="Введите телефон" required>
               </p>
               <!-- почта -->
               <p class="review__question review__question--wrap review__question-icon review__question-icon--email">
                 <label for="email" class="review__label review__label--left site-text">электронная&nbsp;почта*:</label>
-                <input class="review__input" type="email" name="email" id="email" placeholder="Введите e-mail" required>
+                <input class="review__input description-text" type="email" name="email" id="email"
+                  placeholder="Введите e-mail" required>
               </p>
             </div>
           </fieldset>
@@ -248,8 +249,8 @@
           <div class="review__question review__question--wrap review__fieldset review__fieldset--emotions">
             <label for="description-text"
               class="review__legend review__legend--emotions site-title site-title--dark">опишите&nbsp;свои&nbsp;эмоции:</label>
-            <textarea class="review__text" name="description-text" id="description-text" cols="30" rows="10"
-              placeholder="Опишите&nbsp;подробно&nbsp;все&nbsp;свои восторги" required></textarea>
+            <textarea class="review__text description-text" name="description-text" id="description-text" cols="30"
+              rows="3" placeholder="Опишите&nbsp;подробно&nbsp;все&nbsp;свои восторги" required></textarea>
           </div>
           <button class="review__button site-button site-title site-title--light" type="submit">отправить отзыв</button>
           <p class="review__required site-text">* — обязательные поля</p>

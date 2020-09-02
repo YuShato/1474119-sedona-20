@@ -12,14 +12,7 @@
   <div class="page-container">
     <header class="page-header ">
       <!-- всплывающее меню -->
-      <nav class="main-nav">
-        <button class="main-nav__toggle main-nav__toggle--close" type="button" aria-label="закрыть меню">
-          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z"
-              fill="white" />
-          </svg>
-        </button>
+      <nav class="main-nav main-nav--show">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item">
             <a class="site-list__link site-list__link--active">
@@ -44,9 +37,8 @@
         </ul>
       </nav>
       <!-- логотип -->
-      <a class="page-header__logo">
-        <svg width="187" height="97" viewBox="0 0 187 97" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-          aria-label="логотип города Седона">
+      <a class="page-header__logo" aria-label="логотип города Седона">
+        <svg width="187" height="97" viewBox="0 0 187 97" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
           <path d="M186.6 0H0L80.5 90.5C87.6 98.4 99.1 98.4 106.2 90.5L186.6 0Z" fill="#81B3D3" />
           <path d="M43.2 0.7L92.8 59.1L142.1 1.1L43.2 0.7Z" fill="#23A9E1" />
           <path d="M122 17.3C116.9 17.3 111.9 17.4 106.8 17.4C112.8 10.5 115.5 11.2 122 17.3Z" fill="white" />
@@ -125,11 +117,6 @@
         </svg>
       </a>
       <button class="main-nav__toggle main-nav__toggle--open" type="button" aria-label="открыть меню">
-        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2" />
-          <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2" />
-          <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2" />
-        </svg>
       </button>
     </header>
     <main class="page-main">
@@ -251,6 +238,7 @@
       </section>
       <!-- карта -->
       <section class="map">
+        <div class="map__interactive" id="map"></div>
         <h3 class="visually-hidden">седона на карте</h3>
         <div class="map__wrapper">
           <picture>
@@ -317,6 +305,8 @@
       </div>
     </footer>
   </div>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=1fb243a3-0f6e-42e7-95ca-37202837e50e&lang=ru_RU"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -3,4 +3,9 @@
   font-size: $title-size;
   line-height: $title-line-height;
   color: $dark-title;
+  font-family: "PT Sans", "Arial", sans-serif;
+
+  &::placeholder {
+    color: $dark-title;
+  }
 }
