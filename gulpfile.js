@@ -10,8 +10,6 @@ const sync = require("browser-sync").create();
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
-var posthtml = require("gulp-posthtml");
-var include = require("posthtml-include");
 var del = require("del");
 var htmlmin = require("gulp-htmlmin");
 
