@@ -1,5 +1,3 @@
-"use strict";
-
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
@@ -31,9 +29,8 @@ const styles = () => {
     .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
-    .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
-}
+};
 
 exports.styles = styles;
 
@@ -49,7 +46,7 @@ const server = (done) => {
     ui: false,
   });
   done();
-}
+};
 
 exports.server = server;
 
@@ -58,7 +55,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html").on("change", sync.reload);
-}
+};
 
 exports.default = gulp.series(
   styles, server, watcher
@@ -89,7 +86,8 @@ const images = () => {
       }),
       imagemin.svgo()
     ]))
-}
+    .pipe(gulp.dest("build/img"))
+};
 
 exports.images = images;
 
@@ -99,8 +97,8 @@ const createWebp = () => {
     .pipe(webp({
       quality: 90
     }))
-    .pipe(gulp.dest("sourse/img"))
-}
+    .pipe(gulp.dest("build/img"))
+};
 
 exports.webp = createWebp;
 
@@ -111,9 +109,16 @@ const sprite = () => {
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"))
-}
+};
 
 exports.sprite = sprite;
+
+// Clean
+const clean = () => {
+  return del("build")
+};
+
+exports.clean = clean;
 
 // copy
 
@@ -126,28 +131,43 @@ const copy = () => {
     ], {
       base: "source"
     })
-
     .pipe(gulp.dest("build"));
 };
 
 exports.copy = copy;
 
-// Clean
-
-const clean = () => {
-  return del("build")
+const html = () => {
+  return gulp.src("source/*.html", {
+      base: "source"
+    })
+    .pipe(gulp.dest("build"));
 };
+exports.html = html;
 
-exports.clean = clean;
-
-//Build
+const htmlMinify = () => {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
+    .pipe(gulp.dest("build"))
+};
+exports.htmlMinify = htmlMinify;
 
 const build = gulp.series(
-  "clean",
-  "copy",
-  "css",
-  "sprite",
-  "html"
+  clean,
+  copy,
+  styles,
+  images,
+  createWebp,
+  sprite,
+  html,
+  htmlMinify,
 );
-
 exports.build = build;
+
+const start = gulp.series(
+  build,
+  server,
+  watcher
+);
+exports.start = start;
