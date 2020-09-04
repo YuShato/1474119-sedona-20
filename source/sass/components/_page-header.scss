@@ -12,13 +12,21 @@
 .page-header__logo {
   position: absolute;
   height: 97px;
-  top: 224px;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
 
   @media (min-width: $medium) {
     top: 0;
+  }
+
+  &--nojs {
+    top: 224px;
+
+    @media (min-width: $medium) {
+      top: 0;
+    }
   }
 }
 

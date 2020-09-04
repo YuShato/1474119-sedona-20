@@ -4,14 +4,11 @@
   position: relative;
   min-width: 320px;
   width: 100%;
+  display: none;
 
   @media (min-width: $medium) {
     display: flex;
     width: 100%;
-  }
-
-  &--hide {
-    display: none;
   }
 
   &--show {
