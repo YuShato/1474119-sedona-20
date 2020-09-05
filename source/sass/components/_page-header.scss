@@ -29,11 +29,3 @@
     }
   }
 }
-
-.page-header__logo path:first-child {
-  fill: none;
-
-  @media (min-width: $large) {
-    fill: $accent-color;
-  }
-}
