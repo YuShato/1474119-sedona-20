@@ -14,17 +14,26 @@
   margin-right: 6px;
 }
 
-.social__link {
-  &:hover rect,
-  &:focus rect {
+.social__icon {
+  fill: $accent-color;
+
+
+  .social__link:hover &,
+  .social__link:focus & {
     fill: $accent-color-light;
   }
 
-  &:active rect {
+  .social__link:active & {
     fill: $accent-color-dark;
   }
 
-  &:active path {
-    opacity: 0.3;
+  &--path {
+    fill: $light-text;
+
+    .social__link:active & {
+      fill: $light-social;
+    }
   }
 }
+
+// Андрей, посмотри плиз, почему применилось первое свойство fill: $light-text, а второе не применилось? Код на 30 строке
