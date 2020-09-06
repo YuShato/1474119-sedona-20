@@ -5,12 +5,14 @@
 }
 
 .copyright__link {
-  &:hover path,
-  &:focus path {
+  // Андрей, посмотри пожста, почему не применяется свойство fill?
+
+  &:hover .copyright__icon,
+  &:focus .copyright__icon {
     fill: $accent-color;
   }
 
-  &:active path {
+  &:active .copyright__icon {
     opacity: 0.3;
   }
 }

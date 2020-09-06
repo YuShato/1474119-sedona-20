@@ -179,18 +179,20 @@
     padding-bottom: 2px;
     padding-right: 17px;
   }
+}
 
-  &:hover path,
-  &:focus path {
+.photos__icon {
+  opacity: 0.3;
+
+  .photos__like:hover &,
+  .photos__like:focus & {
     opacity: 0.7;
   }
 
-  &:active path {
+  .photos__like:active & {
     opacity: 0.9;
   }
-}
 
-.photos__like path {
   @media (min-width: $large) {
     fill: $light-text;
     opacity: 1;

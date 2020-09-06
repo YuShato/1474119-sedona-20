@@ -1,7 +1,17 @@
 .map {
+  position: relative;
+
   @media (min-width: $large) {
     margin-top: 14px;
   }
+}
+
+.map__interactive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .map__image {

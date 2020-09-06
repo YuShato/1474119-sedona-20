@@ -149,15 +149,6 @@
     background-color: transparent;
   }
 
-  &:hover path,
-  &:focus path {
-    fill: $dark-text;
-  }
-
-  &:active path {
-    opacity: 0.3;
-  }
-
   &--repeat {
     padding-left: 25px;
     padding-right: 15px;
@@ -182,8 +173,24 @@
   }
 }
 
-.video__icon path {
+.video__icon {
+  fill: $gray-medium;
+
+  .video__button:hover &,
+  .video__button:focus & {
+    fill: $dark-text;
+  }
+
+  .video__button:active & {
+    opacity: 0.3;
+  }
+
   @media (min-width: $medium) {
     fill: $light-text;
+
+    .video__button:hover &,
+    .video__button:focus & {
+      opacity: 0.6;
+    }
   }
 }

@@ -355,7 +355,7 @@
 
 .review__item {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 
   &--checkbox {
     @media (min-width: $large) {
@@ -405,13 +405,6 @@
   }
 
   &::placeholder {
-    font-weight: 700;
-    font-size: $title-size;
-    line-height: $title-line-height;
-    color: $dark-title;
-    font-style: normal;
-    font-family: "PT Sans", "Arial", sans-serif;
-
     @media (min-width: $medium) {
       padding-left: 4px;
     }
@@ -533,21 +526,12 @@
   background-color: $input-color;
   resize: none;
   border: none;
-  min-width: 279px;
-  min-height: 160px;
-  padding: 0;
+  min-width: 257px;
+  min-height: 121px;
   margin-top: 10px;
-
-  &::placeholder {
-    font-weight: 700;
-    font-size: $title-size;
-    line-height: $title-line-height;
-    color: $dark-title;
-    padding-top: 13px;
-    padding-left: 20px;
-    padding-bottom: 29px;
-    font-family: "PT Sans", "Arial", sans-serif;
-  }
+  padding-top: 13px;
+  padding-left: 20px;
+  padding-bottom: 26px;
 
   @media (min-width: $medium) {
     width: 100%;

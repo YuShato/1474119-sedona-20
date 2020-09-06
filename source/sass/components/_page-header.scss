@@ -12,7 +12,7 @@
 .page-header__logo {
   position: absolute;
   height: 97px;
-  top: 220px;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -20,12 +20,12 @@
   @media (min-width: $medium) {
     top: 0;
   }
-}
 
-.page-header__logo path:first-child {
-  fill: none;
+  &--nojs {
+    top: 224px;
 
-  @media (min-width: $large) {
-    fill: $accent-color;
+    @media (min-width: $medium) {
+      top: 0;
+    }
   }
 }
