@@ -10,4 +10,5 @@ build/
 node_modules/
 npm-debug.*
 Thumbs.db
+source/css/style.css
 
