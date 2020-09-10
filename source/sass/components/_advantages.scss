@@ -111,6 +111,11 @@
   margin-bottom: 7px;
   margin-right: 12px;
 
+  @media (max-width: $mobile-width-only) {
+    padding-left: 38px;
+    padding-right: 32px;
+  }
+
   @media (min-width: $medium) {
     max-width: 187px;
     margin-left: auto;
@@ -134,9 +139,6 @@
   }
 
   &--road {
-    margin-left: 42px;
-    margin-right: 42px;
-
     @media (min-width: $medium) {
       margin-left: 26px;
       margin-right: 28px;

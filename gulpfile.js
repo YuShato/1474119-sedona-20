@@ -76,7 +76,7 @@ exports.scripts = scripts;
 
 // Images
 const images = () => {
-  return gulp.src("sourse/img/**/*.{jpg, png, svg}")
+  return gulp.src("source/img/**/*.{jpg, png, svg}")
     .pipe(imagemin([
       imagemin.optipng({
         optimizationLevel: 3
@@ -93,7 +93,7 @@ exports.images = images;
 
 //Webp
 const createWebp = () => {
-  return gulp.src("sourse/img/**/*.{png, jpg}")
+  return gulp.src("source/img/**/*.{png, jpg}")
     .pipe(webp({
       quality: 90
     }))
@@ -105,7 +105,7 @@ exports.webp = createWebp;
 //Svg-sprite
 
 const sprite = () => {
-  return gulp.src("sourse/img/**/icon-*.svg")
+  return gulp.src("source/img/**/icon-*.svg")
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"))

@@ -23,10 +23,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 9px;
   }
 
   @media (min-width: $large) {
     margin-bottom: 3px;
+    margin-top: 3px;
   }
 }
 
@@ -37,7 +39,7 @@
   @media (min-width: $medium) {
     font-size: $title-big;
     line-height: $title-line-height;
-    margin-top: 70px;
+    margin-top: 65px;
     margin-bottom: 20px;
   }
 
@@ -74,6 +76,7 @@
 
   @media (min-width: $medium) {
     @include text-reset;
+    border: none;
   }
 
   &--emotions {
@@ -93,7 +96,6 @@
       border: none;
       margin-left: auto;
       margin-right: auto;
-      border-top: 1px solid $dark-gray;
     }
 
     @media (min-width: $large) {
@@ -130,13 +132,15 @@
   }
 
   &--contacts {
+    @media (max-width: $mobile-width-only) {
+      padding-bottom: 14px;
+    }
+
     @media (min-width: $medium) {
       padding: 0;
       width: 100%;
-      border-bottom: none;
       margin-bottom: 45px;
-      margin-top: 28px;
-      border-top: 1px solid $dark-gray;
+      margin-top: 32px;
     }
   }
 }
@@ -154,13 +158,17 @@
 
   @media (min-width: $medium) {
     max-width: 308px;
-    padding-left: 46px;
-    padding-right: 46px;
   }
 
   @media (min-width: $large) {
     padding-left: 61px;
     padding-right: 61px;
+  }
+
+  &--name {
+    @media (min-width: $large) {
+      padding-left: 0;
+    }
   }
 
   &--left {
@@ -171,61 +179,41 @@
   }
 
   &--contacts {
+    @include line;
     padding-top: 18px;
-    padding-bottom: 5px;
 
     @media (min-width: $medium) {
       position: relative;
       margin-bottom: 6px;
+      padding-top: 13px;
     }
   }
 
+
   &--places {
+    @include line;
+
     @media (min-width: $medium) {
       position: relative;
       margin-bottom: 32px;
     }
 
     @media (min-width: $large) {
-      padding-right: 20px;
+      padding-right: 24px;
     }
   }
 
   &--emotions {
     @media (min-width: $medium) {
+      @include line;
       position: relative;
       margin-left: auto;
       margin-right: auto;
+      padding-top: 9px;
+    }
 
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        width: 123px;
-        height: 1px;
-        background-color: $dark-gray;
-        top: 50%;
-
-        @media (min-width: $large) {
-          width: 280px;
-        }
-      }
-
-      &::before {
-        left: -170px;
-
-        @media (min-width: $large) {
-          left: 390px;
-        }
-      }
-
-      &::after {
-        right: -170px;
-
-        @media (min-width: $large) {
-          right: 390px;
-        }
-      }
+    @media (min-width: $large) {
+      padding-top: 3px;
     }
   }
 
@@ -240,6 +228,10 @@
   display: flex;
   margin-right: 13px;
 
+  @media (min-width: $medium) {
+    padding-left: 3px;
+  }
+
   &--left {
     margin-left: 20px;
     margin-bottom: 10px;
@@ -251,6 +243,12 @@
     @media (min-width: $large) {
       display: none;
     }
+  }
+}
+
+.review__fieldset--name .review__label {
+  @media (max-width: $mobile-width-only) {
+    padding-top: 3px;
   }
 }
 
@@ -321,12 +319,12 @@
     content: "";
     position: absolute;
     height: 58px;
-    width: 58px;
+    width: 54px;
     bottom: 0;
     right: 0;
     background-color: $dark-gray;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 20px 20px;
   }
 
   &--tel::after {
@@ -335,6 +333,10 @@
 
   &--email::after {
     background-image: url("../img/icon-mail.svg");
+  }
+
+  @media (min-width: $medium) {
+    padding-top: 7px;
   }
 
   @media (min-width: $large) {
@@ -350,6 +352,7 @@
     justify-content: space-between;
     margin-top: 61px;
     margin-bottom: 4px;
+    border: none;
   }
 }
 
@@ -405,9 +408,7 @@
   }
 
   &::placeholder {
-    @media (min-width: $medium) {
-      padding-left: 4px;
-    }
+    padding-left: 4px;
   }
 }
 
@@ -452,9 +453,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 54px;
     grid-row-gap: 42px;
-    padding-left: 6px;
+    grid-column-gap: 18px;
+    padding-left: 31px;
     margin-bottom: 25px;
     max-width: 500px;
     margin-left: auto;
@@ -467,6 +468,7 @@
     grid-template-rows: min-content;
     grid-column-gap: 45px;
     max-width: 100%;
+    padding-left: 0;
   }
 }
 
@@ -544,7 +546,8 @@
   margin-right: auto;
   margin-bottom: 43px;
   min-height: 58px;
-  font-family: inherit;
+  font-size: $hashtag-size;
+  padding-top: 6px;
 
 
   @media (min-width: $medium) {
@@ -554,6 +557,7 @@
     margin-left: 0;
     margin-bottom: 61px;
     margin-top: 8px;
+    font-size: $title-size;
   }
 
   @media (min-width: $large) {

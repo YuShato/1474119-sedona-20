@@ -35,3 +35,35 @@
     background-color: $dark-gray;
   }
 }
+
+@mixin line {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 123px;
+    height: 1px;
+    background-color: $dark-gray;
+    top: 50%;
+
+    @media (min-width: $large) {
+      width: 280px;
+    }
+  }
+
+  &::before {
+    left: -170px;
+
+    @media (min-width: $large) {
+      left: 390px;
+    }
+  }
+
+  &::after {
+    right: -170px;
+
+    @media (min-width: $large) {
+      right: 390px;
+    }
+  }
+}
