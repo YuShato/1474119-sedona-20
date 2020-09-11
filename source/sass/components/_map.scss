@@ -1,5 +1,6 @@
 .map {
   position: relative;
+  background-color: $input-color;
 
   @media (min-width: $large) {
     margin-top: 14px;

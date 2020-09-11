@@ -84,6 +84,7 @@
   object-fit: cover;
   max-height: 260px;
   max-width: 800px;
+  background-color: $input-color;
 
   @media (min-width: $medium) {
     flex-grow: 2;
@@ -94,6 +95,10 @@
 
   &--right {
     margin-bottom: -5px;
+
+    @media (max-width: $mobile-width-only) {
+      padding-bottom: 17px;
+    }
 
     @media (min-width: $medium) {
       order: -1;
@@ -110,11 +115,6 @@
   @include text-reset;
   margin-bottom: 7px;
   margin-right: 12px;
-
-  @media (max-width: $mobile-width-only) {
-    padding-left: 38px;
-    padding-right: 32px;
-  }
 
   @media (min-width: $medium) {
     max-width: 187px;

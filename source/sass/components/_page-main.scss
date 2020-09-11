@@ -11,3 +11,34 @@
     margin-top: 58px;
   }
 }
+
+.page-main__photo-title {
+  max-width: 458px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 34px;
+  margin-bottom: 28px;
+
+  @media (min-width: $medium) {
+    margin-top: 65px;
+    font-size: $title-big;
+  }
+}
+
+.page-main__photo-info {
+  text-align: center;
+  display: flex;
+  max-width: 458px;
+  margin-left: 20px;
+  margin-right: 20px;
+  line-height: $text-line-height;
+  margin-bottom: 15px;
+
+  @media (min-width: $medium) {
+    margin-bottom: 79px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+  }
+}

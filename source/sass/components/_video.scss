@@ -30,6 +30,7 @@
   min-width: 320px;
   height: 201px;
   width: 100%;
+  background-color: $input-color;
 
   @media (min-width: $medium) {
     height: 500px;
